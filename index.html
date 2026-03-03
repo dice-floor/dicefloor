@@ -3,47 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dice Floor | Elevating the Pit</title>
+    <title>Dice Floor | Authentic Gaming & Maritime Careers</title>
     <style>
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 2rem; background: #fafafa; }
-        header { text-align: center; margin-bottom: 4rem; padding-top: 2rem; }
-        h1 { font-weight: 800; font-size: 2.5rem; color: #111; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
-        .tagline { font-size: 1.2rem; color: #666; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
-        .card { background: white; padding: 2rem; border-radius: 12px; border: 1px solid #eee; transition: transform 0.2s ease; }
-        .card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .card h2 { font-size: 1.3rem; margin-top: 0; color: #222; }
-        .card p { color: #555; font-size: 0.95rem; }
-        .status { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; color: #3498db; margin-bottom: 0.5rem; display: block; }
-        footer { margin-top: 5rem; text-align: center; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; padding-top: 2rem; }
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --bg: #f4f7f6;
+            --text: #333;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+        .vibe {
+            font-style: italic;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        .status-badge {
+            display: inline-block;
+            background: #e1f5fe;
+            color: #0288d1;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid #eee;
+            padding-top: 2rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        .service-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .icon {
+            font-size: 1.5rem;
+        }
     </style>
 </head>
 <body>
-    <header>
+    <div class="container">
+        <div class="status-badge">Launching soon</div>
         <h1>Dice Floor</h1>
-        <p class="tagline">Professional casino solutions for land and sea.</p>
-    </header>
+        <div class="vibe">The pit veteran's edge.</div>
+        
+        <p>
+            We're building the definitive bridge between the pit floor and the high seas. 
+            Real-world staffing, automated compliance, and professional gaming insights, 
+            built by people who have actually worked the shift.
+        </p>
 
-    <div class="grid">
-        <div class="card">
-            <span class="status">Live</span>
-            <h2>Knowledge Base</h2>
-            <p>Expert insights, technical guides, and industry wisdom for casino professionals navigating land-based and maritime careers.</p>
-        </div>
-        <div class="card">
-            <span class="status">Coming Soon</span>
-            <h2>Crew Operations</h2>
-            <p>Streamlined placement and management services connecting top-tier talent with world-class maritime casino floors.</p>
-        </div>
-        <div class="card">
-            <span class="status">In Development</span>
-            <h2>Floor Software</h2>
-            <p>Modern technical tools designed to enhance precision, tracking, and operational efficiency in the pit.</p>
+        <div class="services">
+            <div class="service-item">
+                <span class="icon">⚓</span>
+                <span>Fleet Staffing</span>
+            </div>
+            <div class="service-item">
+                <span class="icon">📈</span>
+                <span>Gaming Logic</span>
+            </div>
+            <div class="service-item">
+                <span class="icon">🐦‍⬛</span>
+                <span>Direct Liaison</span>
+            </div>
         </div>
     </div>
-
-    <footer>
-        &copy; 2026 Dice Floor. All rights reserved.
-    </footer>
 </body>
 </html>
