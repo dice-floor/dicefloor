@@ -6,8 +6,8 @@
     <title>Dice Floor | Authentic Gaming & Maritime Careers</title>
     <style>
         :root {
-            --primary: #2c3e50;
-            --accent: #3498db;
+            --primary: #1e3a5f; /* Deep maritime blue */
+            --accent: #2e8b57; /* Sea green */
             --bg: #f4f7f6;
             --text: #333;
         }
@@ -21,85 +21,106 @@
             height: 100vh;
             margin: 0;
             text-align: center;
+            background-image: linear-gradient(135deg, #f4f7f6 0%, #e0e8e5 100%);
         }
         .container {
-            max-width: 600px;
-            padding: 2rem;
+            max-width: 700px;
+            padding: 3rem 2rem;
             background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(30, 58, 95, 0.1);
+            border-top: 4px solid var(--primary);
         }
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: var(--primary);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.2rem;
             font-weight: 800;
-            letter-spacing: -1px;
+            letter-spacing: -0.5px;
         }
-        .vibe {
-            font-style: italic;
-            color: var(--accent);
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
             margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-        p {
-            line-height: 1.6;
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
+            font-weight: 400;
         }
         .status-badge {
             display: inline-block;
-            background: #e1f5fe;
-            color: #0288d1;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
+            background: #fff3e0;
+            color: #d84315;
+            padding: 0.4rem 1.2rem;
+            border-radius: 3px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            border: 1px solid #ffe0b2;
         }
-        .services {
-            display: flex;
-            justify-content: space-around;
-            border-top: 1px solid #eee;
-            padding-top: 2rem;
-            font-size: 0.9rem;
-            color: #777;
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+            text-align: left;
         }
-        .service-item {
+        .service-card {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 3px solid var(--accent);
+        }
+        .service-card h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+            color: var(--primary);
             display: flex;
-            flex-direction: column;
+            align-items: center;
             gap: 0.5rem;
         }
+        .service-card p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.4;
+        }
         .icon {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+        }
+        .footer {
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: #888;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="status-badge">Launching soon</div>
+        <div class="status-badge">Under Construction</div>
         <h1>Dice Floor</h1>
-        <div class="vibe">The pit veteran's edge.</div>
+        <div class="subtitle">Maritime Recruitment & Gaming Operations</div>
         
-        <p>
-            We're building the definitive bridge between the pit floor and the high seas. 
-            Real-world staffing, automated compliance, and professional gaming insights, 
-            built by people who have actually worked the shift.
-        </p>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3><span class="icon">⚓</span> Crew Agency</h3>
+                <p>Specialized vetting and placement for maritime and casino personnel.</p>
+            </div>
+            <div class="service-card">
+                <h3><span class="icon">📰</span> The Pit Blog</h3>
+                <p>Unfiltered industry insights, career advice, and operational reality checks.</p>
+            </div>
+            <div class="service-card">
+                <h3><span class="icon">🎲</span> Equipment Supply</h3>
+                <p>Professional-grade tables, chips, and accessories for independent rooms.</p>
+            </div>
+            <div class="service-card">
+                <h3><span class="icon">💻</span> Gaming Software</h3>
+                <p>Advanced tournament management and operational logic engines.</p>
+            </div>
+        </div>
 
-        <div class="services">
-            <div class="service-item">
-                <span class="icon">⚓</span>
-                <span>Fleet Staffing</span>
-            </div>
-            <div class="service-item">
-                <span class="icon">📈</span>
-                <span>Gaming Logic</span>
-            </div>
-            <div class="service-item">
-                <span class="icon">🐦‍⬛</span>
-                <span>Direct Liaison</span>
-            </div>
+        <div class="footer">
+            <p>Built by veterans. Managed by 🐦‍⬛ Rook.</p>
         </div>
     </div>
 </body>
