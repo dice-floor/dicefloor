@@ -90,21 +90,21 @@
         }
 
         .masthead-logo .word-dice {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'DM Sans', sans-serif;
             font-weight: 300;
-            font-style: italic;
-            font-size: 62px;
+            font-size: 58px;
             color: var(--black);
-            letter-spacing: -0.02em;
+            letter-spacing: 0.06em;
         }
 
         .masthead-logo .word-floor {
-            font-family: 'DM Sans', sans-serif;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
-            font-size: 54px;
+            font-style: italic;
+            font-size: 66px;
             color: var(--black);
-            letter-spacing: 0.04em;
-            padding-left: 6px;
+            letter-spacing: -0.02em;
+            padding-left: 4px;
         }
 
         /* ─── SEPARATOR LINES ─────────────────────────────────────── */
@@ -312,9 +312,13 @@
             border-left: 1px solid var(--rule);
         }
 
+        /* Audio cards — compact horizontal layout */
         .audio-card {
-            padding-bottom: 18px;
-            margin-bottom: 18px;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding-bottom: 14px;
+            margin-bottom: 14px;
             border-bottom: 1px solid var(--rule);
         }
 
@@ -326,10 +330,10 @@
 
         .audio-thumb-wrap {
             position: relative;
-            width: 100%;
-            aspect-ratio: 1 / 1;
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
             overflow: hidden;
-            margin-bottom: 10px;
             background: #e8e8e8;
         }
 
@@ -351,51 +355,58 @@
         }
 
         .audio-thumb-wrap:hover .audio-play-overlay {
-            background: rgba(0,0,0,0.38);
+            background: rgba(0,0,0,0.4);
         }
 
         .audio-play-circle {
-            width: 42px;
-            height: 42px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             background: rgba(255,255,255,0.92);
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+            box-shadow: 0 1px 6px rgba(0,0,0,0.2);
         }
 
         .audio-play-circle svg {
-            width: 16px;
-            height: 16px;
+            width: 11px;
+            height: 11px;
             fill: var(--black);
-            margin-left: 3px;
+            margin-left: 2px;
         }
 
-        .audio-card .audio-tag {
-            display: inline-block;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 10px;
-            font-weight: 500;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 5px;
+        .audio-card-text {
+            flex: 1;
+            min-width: 0;
         }
 
         .audio-card .audio-title {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 15px;
             color: var(--black);
-            line-height: 1.25;
-            margin-bottom: 8px;
+            line-height: 1.3;
+            margin-bottom: 5px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .audio-card .audio-date {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 400;
+            color: var(--light);
+            letter-spacing: 0.02em;
+            display: block;
+            margin-bottom: 6px;
         }
 
         .audio-player {
             width: 100%;
-            height: 28px;
-            margin-bottom: 6px;
+            height: 24px;
             accent-color: var(--accent);
         }
 
@@ -498,19 +509,20 @@
         }
 
         .footer-logo .word-dice {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 300;
-            font-style: italic;
-            font-size: 22px;
-            color: var(--black);
-        }
-
-        .footer-logo .word-floor {
             font-family: 'DM Sans', sans-serif;
             font-weight: 300;
             font-size: 20px;
             color: var(--black);
-            letter-spacing: 0.04em;
+            letter-spacing: 0.06em;
+        }
+
+        .footer-logo .word-floor {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            font-size: 24px;
+            color: var(--black);
+            letter-spacing: -0.01em;
         }
 
         .footer-links {
@@ -617,60 +629,78 @@
             <!-- Right: audio thumbnails -->
             <div class="hero-side">
 
+                <!-- LISTEN label aligns with "Cruise Lines" tag in left column -->
+                <span class="tag">Listen</span>
+
                 <div class="audio-card">
                     <div class="audio-thumb-wrap">
-                        <img src="https://picsum.photos/seed/audio1/400/400" alt="Audio thumbnail">
+                        <img src="https://picsum.photos/seed/audio1/160/160" alt="Audio thumbnail">
                         <div class="audio-play-overlay">
                             <div class="audio-play-circle">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
                             </div>
                         </div>
                     </div>
-                    <span class="audio-tag">Cruise Lines</span>
-                    <h4 class="audio-title">Inside the Dealer Shortage Reshaping Casino Cruise Operations</h4>
-                    <audio class="audio-player" controls>
-                        <source src="#" type="audio/mpeg">
-                    </audio>
-                    <div class="article-footer">
-                        <span class="article-meta">March 2026 &nbsp;·&nbsp; 8 min</span>
+                    <div class="audio-card-text">
+                        <h4 class="audio-title">Inside the Dealer Shortage Reshaping Casino Cruise Operations Worldwide</h4>
+                        <span class="audio-date">March 2026 &nbsp;·&nbsp; 8 min</span>
+                        <audio class="audio-player" controls>
+                            <source src="#" type="audio/mpeg">
+                        </audio>
                     </div>
                 </div>
 
                 <div class="audio-card">
                     <div class="audio-thumb-wrap">
-                        <img src="https://picsum.photos/seed/audio2/400/400" alt="Audio thumbnail">
+                        <img src="https://picsum.photos/seed/audio2/160/160" alt="Audio thumbnail">
                         <div class="audio-play-overlay">
                             <div class="audio-play-circle">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
                             </div>
                         </div>
                     </div>
-                    <span class="audio-tag">Jobs</span>
-                    <h4 class="audio-title">What Cruise Line Casinos Are Paying Dealers in 2026</h4>
-                    <audio class="audio-player" controls>
-                        <source src="#" type="audio/mpeg">
-                    </audio>
-                    <div class="article-footer">
-                        <span class="article-meta">March 2026 &nbsp;·&nbsp; 5 min</span>
+                    <div class="audio-card-text">
+                        <h4 class="audio-title">What Cruise Line Casinos Are Paying Dealers in 2026</h4>
+                        <span class="audio-date">March 2026 &nbsp;·&nbsp; 5 min</span>
+                        <audio class="audio-player" controls>
+                            <source src="#" type="audio/mpeg">
+                        </audio>
                     </div>
                 </div>
 
                 <div class="audio-card">
                     <div class="audio-thumb-wrap">
-                        <img src="https://picsum.photos/seed/audio3/400/400" alt="Audio thumbnail">
+                        <img src="https://picsum.photos/seed/audio3/160/160" alt="Audio thumbnail">
                         <div class="audio-play-overlay">
                             <div class="audio-play-circle">
                                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
                             </div>
                         </div>
                     </div>
-                    <span class="audio-tag">Land Casinos</span>
-                    <h4 class="audio-title">Vegas vs. Macau: Where the Careers Are Heading Now</h4>
-                    <audio class="audio-player" controls>
-                        <source src="#" type="audio/mpeg">
-                    </audio>
-                    <div class="article-footer">
-                        <span class="article-meta">March 2026 &nbsp;·&nbsp; 6 min</span>
+                    <div class="audio-card-text">
+                        <h4 class="audio-title">Vegas vs. Macau: Where the Careers Are Heading Now</h4>
+                        <span class="audio-date">March 2026 &nbsp;·&nbsp; 6 min</span>
+                        <audio class="audio-player" controls>
+                            <source src="#" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+
+                <div class="audio-card">
+                    <div class="audio-thumb-wrap">
+                        <img src="https://picsum.photos/seed/audio4/160/160" alt="Audio thumbnail">
+                        <div class="audio-play-overlay">
+                            <div class="audio-play-circle">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="audio-card-text">
+                        <h4 class="audio-title">Breaking Into Maritime Gaming: A First-Timer's Honest Guide to Landing Your First Contract</h4>
+                        <span class="audio-date">February 2026 &nbsp;·&nbsp; 7 min</span>
+                        <audio class="audio-player" controls>
+                            <source src="#" type="audio/mpeg">
+                        </audio>
                     </div>
                 </div>
 
