@@ -104,7 +104,6 @@
             font-size: 54px;
             color: var(--black);
             letter-spacing: 0.04em;
-            text-transform: lowercase;
             padding-left: 6px;
         }
 
@@ -117,7 +116,7 @@
 
         .rule-dark {
             border: none;
-            border-top: 2px solid var(--rule-dark);
+            border-top: 1px solid var(--rule-dark);
             margin: 0 40px;
         }
 
@@ -201,14 +200,6 @@
             margin-bottom: 14px;
         }
 
-        .article-img-tall {
-            aspect-ratio: 4 / 5;
-        }
-
-        .article-img-wide {
-            aspect-ratio: 21 / 9;
-        }
-
         .article-headline {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 400;
@@ -223,7 +214,15 @@
             font-weight: 300;
             color: var(--mid);
             line-height: 1.55;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+        }
+
+        /* Article footer: meta left, speaker right */
+        .article-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 4px;
         }
 
         .article-meta {
@@ -234,47 +233,170 @@
             letter-spacing: 0.02em;
         }
 
+        .speaker-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            color: var(--light);
+            font-size: 15px;
+            line-height: 1;
+            transition: color 0.15s;
+            display: flex;
+            align-items: center;
+        }
+
+        .speaker-btn:hover {
+            color: var(--accent);
+        }
+
+        .speaker-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
         /* ─── ROW 1 — HERO ────────────────────────────────────────── */
         .row-hero {
             display: grid;
-            grid-template-columns: 1fr 380px;
+            grid-template-columns: 1fr 320px;
             gap: 40px;
             padding: 28px 0 32px;
             border-bottom: 1px solid var(--rule);
         }
 
-        .hero-main .article-img {
-            aspect-ratio: 16 / 9;
+        /* Main hero article — shorter panoramic image */
+        .hero-main .hero-top-img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 21 / 9;
+            object-fit: cover;
+            background: #e8e8e8;
+            margin-bottom: 14px;
         }
 
         .hero-main .article-headline {
-            font-size: 38px;
+            font-size: 34px;
             letter-spacing: -0.02em;
         }
 
         .hero-main .article-dek {
-            font-size: 16px;
+            font-size: 15px;
         }
 
+        /* Two sub-articles below the main hero article */
+        .hero-sub-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--rule);
+        }
+
+        .hero-sub-item .article-img {
+            aspect-ratio: 16 / 10;
+        }
+
+        .hero-sub-item .article-headline {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        /* Right column — audio thumbnails */
         .hero-side {
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            gap: 0;
             padding-left: 40px;
             border-left: 1px solid var(--rule);
         }
 
-        .hero-side-item .article-headline {
-            font-size: 20px;
+        .audio-card {
+            padding-bottom: 18px;
+            margin-bottom: 18px;
+            border-bottom: 1px solid var(--rule);
         }
 
-        .hero-side-item .article-img {
-            aspect-ratio: 16 / 10;
+        .audio-card:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
 
-        .hero-side-item + .hero-side-item {
-            padding-top: 24px;
-            border-top: 1px solid var(--rule);
+        .audio-thumb-wrap {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            margin-bottom: 10px;
+            background: #e8e8e8;
+        }
+
+        .audio-thumb-wrap img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .audio-play-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.22);
+            transition: background 0.2s;
+        }
+
+        .audio-thumb-wrap:hover .audio-play-overlay {
+            background: rgba(0,0,0,0.38);
+        }
+
+        .audio-play-circle {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.92);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+        }
+
+        .audio-play-circle svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--black);
+            margin-left: 3px;
+        }
+
+        .audio-card .audio-tag {
+            display: inline-block;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+
+        .audio-card .audio-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: var(--black);
+            line-height: 1.25;
+            margin-bottom: 8px;
+        }
+
+        .audio-player {
+            width: 100%;
+            height: 28px;
+            margin-bottom: 6px;
+            accent-color: var(--accent);
         }
 
         /* ─── ROW 2 — THREE COLUMNS ───────────────────────────────── */
@@ -369,7 +491,7 @@
         footer {
             margin-top: 60px;
             padding: 32px 40px;
-            border-top: 2px solid var(--rule-dark);
+            border-top: 1px solid var(--rule-dark);
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -389,7 +511,6 @@
             font-size: 20px;
             color: var(--black);
             letter-spacing: 0.04em;
-            text-transform: lowercase;
         }
 
         .footer-links {
@@ -427,7 +548,7 @@
     <!-- MASTHEAD -->
     <div class="masthead">
         <a href="#" class="masthead-logo">
-            <span class="word-dice">dice</span><span class="word-floor">floor</span>
+            <span class="word-dice">Dice</span><span class="word-floor">Floor</span>
         </a>
     </div>
 
@@ -452,26 +573,107 @@
         <!-- ROW 1 — HERO -->
         <div class="row-label">Row 1</div>
         <div class="row-hero">
+
+            <!-- Left: main article + 2 sub-articles below -->
             <div class="hero-main">
                 <span class="tag">Cruise Lines</span>
-                <img class="article-img" src="https://picsum.photos/seed/cruise1/900/506" alt="Article image" loading="lazy">
+                <img class="hero-top-img" src="https://picsum.photos/seed/cruise1/1200/514" alt="Article image" loading="lazy">
                 <h2 class="article-headline">Inside the Dealer Shortage Reshaping Casino Cruise Operations Worldwide</h2>
                 <p class="article-dek">A wave of early retirements and stricter visa requirements has left shipboard gaming floors short-staffed heading into peak season — and operators are scrambling to fill the gap.</p>
-                <span class="article-meta">By Staff Writer &nbsp;·&nbsp; March 2026</span>
+                <div class="article-footer">
+                    <span class="article-meta">By Staff Writer &nbsp;·&nbsp; March 2026</span>
+                    <button class="speaker-btn" aria-label="Listen to article">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                    </button>
+                </div>
+
+                <!-- Two sub-articles below the main -->
+                <div class="hero-sub-grid">
+                    <article class="hero-sub-item">
+                        <span class="tag">Jobs</span>
+                        <img class="article-img" src="https://picsum.photos/seed/sub1/600/375" alt="Article image" loading="lazy">
+                        <h3 class="article-headline">What Cruise Line Casinos Are Paying Dealers in 2026</h3>
+                        <div class="article-footer">
+                            <span class="article-meta">March 2026</span>
+                            <button class="speaker-btn" aria-label="Listen to article">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+                    <article class="hero-sub-item">
+                        <span class="tag">Land Casinos</span>
+                        <img class="article-img" src="https://picsum.photos/seed/sub2/600/375" alt="Article image" loading="lazy">
+                        <h3 class="article-headline">Vegas vs. Macau: Where the Careers Are Heading Now</h3>
+                        <div class="article-footer">
+                            <span class="article-meta">March 2026</span>
+                            <button class="speaker-btn" aria-label="Listen to article">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                            </button>
+                        </div>
+                    </article>
+                </div>
             </div>
+
+            <!-- Right: audio thumbnails -->
             <div class="hero-side">
-                <div class="hero-side-item">
-                    <span class="tag">Jobs</span>
-                    <img class="article-img" src="https://picsum.photos/seed/jobs1/400/250" alt="Article image" loading="lazy">
-                    <h3 class="article-headline">What Cruise Line Casinos Are Paying in 2026</h3>
-                    <span class="article-meta">March 2026</span>
+
+                <div class="audio-card">
+                    <div class="audio-thumb-wrap">
+                        <img src="https://picsum.photos/seed/audio1/400/400" alt="Audio thumbnail">
+                        <div class="audio-play-overlay">
+                            <div class="audio-play-circle">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="audio-tag">Cruise Lines</span>
+                    <h4 class="audio-title">Inside the Dealer Shortage Reshaping Casino Cruise Operations</h4>
+                    <audio class="audio-player" controls>
+                        <source src="#" type="audio/mpeg">
+                    </audio>
+                    <div class="article-footer">
+                        <span class="article-meta">March 2026 &nbsp;·&nbsp; 8 min</span>
+                    </div>
                 </div>
-                <div class="hero-side-item">
-                    <span class="tag">Land Casinos</span>
-                    <img class="article-img" src="https://picsum.photos/seed/land1/400/250" alt="Article image" loading="lazy">
-                    <h3 class="article-headline">Vegas vs. Macau: Where the Careers Are Heading Now</h3>
-                    <span class="article-meta">March 2026</span>
+
+                <div class="audio-card">
+                    <div class="audio-thumb-wrap">
+                        <img src="https://picsum.photos/seed/audio2/400/400" alt="Audio thumbnail">
+                        <div class="audio-play-overlay">
+                            <div class="audio-play-circle">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="audio-tag">Jobs</span>
+                    <h4 class="audio-title">What Cruise Line Casinos Are Paying Dealers in 2026</h4>
+                    <audio class="audio-player" controls>
+                        <source src="#" type="audio/mpeg">
+                    </audio>
+                    <div class="article-footer">
+                        <span class="article-meta">March 2026 &nbsp;·&nbsp; 5 min</span>
+                    </div>
                 </div>
+
+                <div class="audio-card">
+                    <div class="audio-thumb-wrap">
+                        <img src="https://picsum.photos/seed/audio3/400/400" alt="Audio thumbnail">
+                        <div class="audio-play-overlay">
+                            <div class="audio-play-circle">
+                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="audio-tag">Land Casinos</span>
+                    <h4 class="audio-title">Vegas vs. Macau: Where the Careers Are Heading Now</h4>
+                    <audio class="audio-player" controls>
+                        <source src="#" type="audio/mpeg">
+                    </audio>
+                    <div class="article-footer">
+                        <span class="article-meta">March 2026 &nbsp;·&nbsp; 6 min</span>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -483,21 +685,36 @@
                 <img class="article-img" src="https://picsum.photos/seed/art1/600/375" alt="Article image" loading="lazy">
                 <h3 class="article-headline">The Unwritten Rules of the Casino Floor That No One Tells You</h3>
                 <p class="article-dek">Veteran dealers share the informal code that governs life in the pit — from tip etiquette to shift-end rituals.</p>
-                <span class="article-meta">February 2026</span>
+                <div class="article-footer">
+                    <span class="article-meta">February 2026</span>
+                    <button class="speaker-btn" aria-label="Listen to article">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                    </button>
+                </div>
             </article>
             <article>
                 <span class="tag">Cruise Lines</span>
                 <img class="article-img" src="https://picsum.photos/seed/cruise2/600/375" alt="Article image" loading="lazy">
                 <h3 class="article-headline">Contractual Minefields: Reading a Cruise Ship Employment Agreement</h3>
                 <p class="article-dek">Before you sign, understand the clauses that could affect your earnings, repatriation rights, and time off.</p>
-                <span class="article-meta">February 2026</span>
+                <div class="article-footer">
+                    <span class="article-meta">February 2026</span>
+                    <button class="speaker-btn" aria-label="Listen to article">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                    </button>
+                </div>
             </article>
             <article>
                 <span class="tag">Land Casinos</span>
                 <img class="article-img" src="https://picsum.photos/seed/land2/600/375" alt="Article image" loading="lazy">
                 <h3 class="article-headline">From Pit Boss to Director: A Career Map for Gaming Professionals</h3>
                 <p class="article-dek">The hierarchy looks simple from the outside. Those who climb it know the reality is far more complex.</p>
-                <span class="article-meta">January 2026</span>
+                <div class="article-footer">
+                    <span class="article-meta">January 2026</span>
+                    <button class="speaker-btn" aria-label="Listen to article">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                    </button>
+                </div>
             </article>
         </div>
 
@@ -508,26 +725,46 @@
                 <span class="tag">Land Casinos</span>
                 <img class="article-img" src="https://picsum.photos/seed/land3/800/450" alt="Article image" loading="lazy">
                 <h2 class="article-headline">The Regulated Markets Opening Up for Casino Professionals in 2026</h2>
-                <p class="article-dek">Japan, Brazil, and several Eastern European nations are rolling out licensing frameworks — creating thousands of new positions for experienced operators. Here's where to look, and what to expect when you get there.</p>
-                <span class="article-meta">By Staff Writer &nbsp;·&nbsp; March 2026</span>
+                <p class="article-dek">Japan, Brazil, and several Eastern European nations are rolling out licensing frameworks — creating thousands of new positions for experienced operators. Japan's integrated resort programme, long delayed by political friction, is finally moving into the staffing phase, with operators actively recruiting pit supervisors, gaming managers, and compliance specialists. Brazil's new federal casino bill opens a market of 215 million people that has been officially closed since 1946. Meanwhile, Poland, Czech Republic, and Romania are expanding their regulated footprints, creating demand for multilingual dealers and floor managers with Western European experience. Here's where to look, what qualifications carry weight in each jurisdiction, and what to expect when you arrive.</p>
+                <div class="article-footer">
+                    <span class="article-meta">By Staff Writer &nbsp;·&nbsp; March 2026</span>
+                    <button class="speaker-btn" aria-label="Listen to article">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                    </button>
+                </div>
             </div>
             <div class="stack">
                 <div class="stack-item">
                     <span class="tag">Jobs</span>
                     <img class="article-img" src="https://picsum.photos/seed/jobs2/400/225" alt="Article image" loading="lazy">
                     <h3 class="article-headline">Certification Courses Worth Taking Before Your Next Application</h3>
-                    <span class="article-meta">February 2026</span>
+                    <div class="article-footer">
+                        <span class="article-meta">February 2026</span>
+                        <button class="speaker-btn" aria-label="Listen to article">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="stack-item">
                     <span class="tag">Articles</span>
                     <img class="article-img" src="https://picsum.photos/seed/art2/400/225" alt="Article image" loading="lazy">
                     <h3 class="article-headline">How Background Checks Work Differently Across Gaming Jurisdictions</h3>
-                    <span class="article-meta">January 2026</span>
+                    <div class="article-footer">
+                        <span class="article-meta">January 2026</span>
+                        <button class="speaker-btn" aria-label="Listen to article">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                        </button>
+                    </div>
                 </div>
                 <div class="stack-item">
                     <span class="tag">Cruise Lines</span>
                     <h3 class="article-headline">Eight Questions to Ask Before Accepting a Shipboard Casino Contract</h3>
-                    <span class="article-meta">December 2025</span>
+                    <div class="article-footer">
+                        <span class="article-meta">December 2025</span>
+                        <button class="speaker-btn" aria-label="Listen to article">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -539,25 +776,45 @@
                 <span class="tag">Jobs</span>
                 <img class="article-img" src="https://picsum.photos/seed/jobs3/500/313" alt="Article image" loading="lazy">
                 <h3 class="article-headline">Blackjack vs. Poker: Which Specialty Pays More at Sea?</h3>
-                <span class="article-meta">March 2026</span>
+                <div class="article-footer">
+                    <span class="article-meta">March 2026</span>
+                    <button class="speaker-btn" aria-label="Listen to article">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                    </button>
+                </div>
             </article>
             <article>
                 <span class="tag">Articles</span>
                 <img class="article-img" src="https://picsum.photos/seed/art3/500/313" alt="Article image" loading="lazy">
                 <h3 class="article-headline">The Quiet Rise of Electronic Table Games and What It Means for Dealers</h3>
-                <span class="article-meta">February 2026</span>
+                <div class="article-footer">
+                    <span class="article-meta">February 2026</span>
+                    <button class="speaker-btn" aria-label="Listen to article">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                    </button>
+                </div>
             </article>
             <article>
                 <span class="tag">Land Casinos</span>
                 <img class="article-img" src="https://picsum.photos/seed/land4/500/313" alt="Article image" loading="lazy">
                 <h3 class="article-headline">Life After the Strip: Tribal Casinos as a Career Destination</h3>
-                <span class="article-meta">February 2026</span>
+                <div class="article-footer">
+                    <span class="article-meta">February 2026</span>
+                    <button class="speaker-btn" aria-label="Listen to article">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                    </button>
+                </div>
             </article>
             <article>
                 <span class="tag">Cruise Lines</span>
                 <img class="article-img" src="https://picsum.photos/seed/cruise3/500/313" alt="Article image" loading="lazy">
                 <h3 class="article-headline">Gratuity Pools on Cruise Ships: How the Math Actually Works</h3>
-                <span class="article-meta">January 2026</span>
+                <div class="article-footer">
+                    <span class="article-meta">January 2026</span>
+                    <button class="speaker-btn" aria-label="Listen to article">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                    </button>
+                </div>
             </article>
         </div>
 
@@ -569,14 +826,24 @@
                 <img class="article-img" src="https://picsum.photos/seed/art4/700/394" alt="Article image" loading="lazy">
                 <h2 class="article-headline">The Psychology of the Pit: What Years of Dealing Teach You About People</h2>
                 <p class="article-dek">Casino dealers develop an acute read on human behaviour that few professions can match. Former pros reflect on what the job taught them — and what it cost.</p>
-                <span class="article-meta">By Staff Writer &nbsp;·&nbsp; March 2026</span>
+                <div class="article-footer">
+                    <span class="article-meta">By Staff Writer &nbsp;·&nbsp; March 2026</span>
+                    <button class="speaker-btn" aria-label="Listen to article">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                    </button>
+                </div>
             </article>
             <article>
                 <span class="tag">Jobs</span>
                 <img class="article-img" src="https://picsum.photos/seed/jobs4/700/394" alt="Article image" loading="lazy">
                 <h2 class="article-headline">Breaking Into Maritime Gaming: A First-Timer's Honest Guide</h2>
                 <p class="article-dek">No experience at sea? No existing contracts? Here's a realistic, step-by-step account of how new entrants are actually landing their first shipboard roles right now.</p>
-                <span class="article-meta">By Staff Writer &nbsp;·&nbsp; February 2026</span>
+                <div class="article-footer">
+                    <span class="article-meta">By Staff Writer &nbsp;·&nbsp; February 2026</span>
+                    <button class="speaker-btn" aria-label="Listen to article">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                    </button>
+                </div>
             </article>
         </div>
 
@@ -585,7 +852,7 @@
     <!-- FOOTER -->
     <footer>
         <div class="footer-logo">
-            <span class="word-dice">dice</span><span class="word-floor">floor</span>
+            <span class="word-dice">Dice</span><span class="word-floor">Floor</span>
         </div>
         <div class="footer-links">
             <a href="#">Home</a>
