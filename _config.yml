@@ -1,0 +1,16 @@
+title: Dice Floor
+description: Gaming & Maritime Careers
+url: "https://dicefloor.com"
+baseurl: ""
+permalink: /articles/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+timezone: Europe/London
+
+exclude:
+  - docs/
+  - README.md
+  - "*.zip"
+  - Gemfile
+  - Gemfile.lock

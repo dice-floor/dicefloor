@@ -1,0 +1,63 @@
+<!-- MOBILE NAV OVERLAY -->
+<div class="mobile-nav-overlay" id="mobileNav">
+    <div class="mobile-nav-header">
+        <a href="{{ '/' | relative_url }}" class="masthead-logo">
+            <span style="font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-size:32px;color:#111;letter-spacing:-0.02em;">Dice</span><span style="font-family:'DM Sans',sans-serif;font-weight:300;font-size:28px;color:#111;letter-spacing:0.04em;padding-left:4px;">Floor</span>
+        </a>
+    </div>
+    <nav class="mobile-nav-menu">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/articles/' | relative_url }}">Articles</a>
+        <a href="#">Cruise Lines</a>
+        <a href="#">Land Casinos</a>
+        <a href="#">Jobs</a>
+        <a href="#">Learning</a>
+        <a href="#">About</a>
+        <a href="#">FAQ</a>
+    </nav>
+    <div class="mobile-nav-close-wrap">
+        <button class="mobile-nav-close" onclick="document.getElementById('mobileNav').classList.remove('open')">
+            Close <span class="close-x">&#x2715;</span>
+        </button>
+    </div>
+</div>
+
+<!-- MOBILE HEADER -->
+<div class="mobile-header">
+    <div style="width:30px"></div>
+    <a href="{{ '/' | relative_url }}" class="masthead-logo">
+        <span class="word-dice">Dice</span><span class="word-floor">Floor</span>
+    </a>
+    <button class="hamburger-btn" aria-label="Open menu" onclick="document.getElementById('mobileNav').classList.add('open')">
+        <span></span><span></span><span></span>
+    </button>
+</div>
+<hr class="mobile-rule-dark" style="display:none">
+
+<!-- DESKTOP UTILITY BAR -->
+<div class="util-bar">
+    <div class="util-left"><a href="#">learning</a></div>
+    <div class="util-right">
+        <a href="#">About</a>
+        <a href="#">FAQ</a>
+    </div>
+</div>
+
+<!-- DESKTOP MASTHEAD -->
+<div class="masthead">
+    <a href="{{ '/' | relative_url }}" class="masthead-logo">
+        <span class="word-dice">Dice</span><span class="word-floor">Floor</span>
+    </a>
+</div>
+
+<hr class="rule-dark">
+
+<nav class="primary-nav">
+    <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>Home</a>
+    <a href="{{ '/articles/' | relative_url }}"{% if page.url contains '/articles' %} class="active"{% endif %}>Articles</a>
+    <a href="#">Cruise Lines</a>
+    <a href="#">Land Casinos</a>
+    <a href="#">Jobs</a>
+</nav>
+
+<hr class="rule-dark">

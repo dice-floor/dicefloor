@@ -1,873 +1,214 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dice Floor | Gaming & Maritime Careers</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
-    <style>
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+---
+layout: default
+---
 
-        :root {
-            --black:    #111111;
-            --ink:      #1a1a1a;
-            --mid:      #555555;
-            --light:    #888888;
-            --rule:     #cccccc;
-            --rule-dark:#111111;
-            --bg:       #ffffff;
-            --accent:   #b5001f;
-        }
+<!-- MOBILE NAV & HEADER are in _includes/header.html -->
 
-        body {
-            background: var(--bg);
-            color: var(--ink);
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
+<!-- ═══ DESKTOP CONTENT ═══════════════════════════════════════════ -->
+<div class="content">
 
-        a { color: inherit; text-decoration: none; }
-        a:hover { color: var(--accent); }
+    {% assign posts = site.posts %}
 
-        /* ─── TOP UTILITY BAR ─────────────────────────────────────── */
-        .util-bar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 40px;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--mid);
-        }
-        .util-bar a { color: var(--mid); transition: color 0.15s; }
-        .util-bar a:hover { color: var(--accent); }
-        .util-left, .util-right { display: flex; gap: 20px; }
-
-        /* ─── MASTHEAD ────────────────────────────────────────────── */
-        .masthead { text-align: center; padding: 28px 40px 20px; }
-
-        .masthead-logo {
-            display: inline-block;
-            line-height: 1;
-            letter-spacing: -0.01em;
-        }
-        .masthead-logo .word-dice {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 300;
-            font-style: italic;
-            font-size: 62px;
-            color: var(--black);
-            letter-spacing: -0.02em;
-        }
-        .masthead-logo .word-floor {
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 300;
-            font-size: 54px;
-            color: var(--black);
-            letter-spacing: 0.04em;
-            padding-left: 6px;
-        }
-
-        /* ─── SEPARATOR LINES ─────────────────────────────────────── */
-        .rule-light { border: none; border-top: 1px solid var(--rule); margin: 0 40px; }
-        .rule-dark  { border: none; border-top: 1px solid var(--rule-dark); margin: 0 40px; }
-
-        /* ─── PRIMARY NAV ─────────────────────────────────────────── */
-        .primary-nav {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 40px;
-        }
-        .primary-nav a {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--ink);
-            padding: 14px 18px;
-            position: relative;
-            transition: color 0.15s;
-        }
-        .primary-nav a:hover { color: var(--accent); }
-        .primary-nav a.active { color: var(--accent); }
-        .primary-nav a.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 18px; right: 18px;
-            height: 2px;
-            background: var(--accent);
-        }
-
-        /* ─── CONTENT WRAPPER ─────────────────────────────────────── */
-        .content { max-width: 1240px; margin: 0 auto; padding: 0 40px; }
-
-        /* ─── CATEGORY TAG ────────────────────────────────────────── */
-        .tag {
-            display: inline-block;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 8px;
-        }
-
-        /* ─── ARTICLE COMPONENTS ──────────────────────────────────── */
-        .article-img {
-            display: block;
-            width: 100%;
-            aspect-ratio: 16 / 10;
-            object-fit: cover;
-            background: #e8e8e8;
-            margin-bottom: 14px;
-        }
-        .article-headline {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 400;
-            color: var(--black);
-            line-height: 1.2;
-            margin-bottom: 8px;
-        }
-        .article-dek {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 14px;
-            font-weight: 300;
-            color: var(--mid);
-            line-height: 1.55;
-            margin-bottom: 10px;
-        }
-        .article-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 4px;
-        }
-        .article-meta {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 12px;
-            font-weight: 400;
-            color: var(--light);
-            letter-spacing: 0.02em;
-        }
-        .speaker-btn {
-            background: none; border: none; cursor: pointer; padding: 0;
-            color: var(--light); line-height: 1; transition: color 0.15s;
-            display: flex; align-items: center;
-        }
-        .speaker-btn:hover { color: var(--accent); }
-        .speaker-btn svg { width: 16px; height: 16px; fill: currentColor; }
-
-        /* ─── ROW 1 — HERO ────────────────────────────────────────── */
-        .row-hero {
-            display: grid;
-            grid-template-columns: 1fr 320px;
-            gap: 40px;
-            padding: 28px 0 32px;
-            border-bottom: 1px solid var(--rule);
-        }
-        .hero-main .hero-top-img {
-            display: block; width: 100%;
-            aspect-ratio: 21 / 9; object-fit: cover;
-            background: #e8e8e8; margin-bottom: 14px;
-        }
-        .hero-main .article-headline { font-size: 34px; letter-spacing: -0.02em; }
-        .hero-main .article-dek { font-size: 15px; }
-
-        .hero-side {
-            display: flex; flex-direction: column; gap: 0;
-            padding-left: 40px;
-            border-left: 1px solid var(--rule);
-        }
-
-        /* Audio cards */
-        .audio-card {
-            display: flex; gap: 12px; align-items: flex-start;
-            padding-bottom: 14px; margin-bottom: 14px;
-            border-bottom: 1px solid var(--rule);
-        }
-        .audio-card:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-        .audio-thumb-wrap {
-            position: relative; flex-shrink: 0;
-            width: 80px; height: 80px;
-            overflow: hidden; background: #e8e8e8;
-        }
-        .audio-thumb-wrap img { display: block; width: 100%; height: 100%; object-fit: cover; }
-        .audio-play-overlay {
-            position: absolute; inset: 0;
-            display: flex; align-items: center; justify-content: center;
-            background: rgba(0,0,0,0.22); transition: background 0.2s;
-        }
-        .audio-thumb-wrap:hover .audio-play-overlay { background: rgba(0,0,0,0.4); }
-        .audio-play-circle {
-            width: 28px; height: 28px; border-radius: 50%;
-            background: rgba(255,255,255,0.92);
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 1px 6px rgba(0,0,0,0.2);
-        }
-        .audio-play-circle svg { width: 11px; height: 11px; fill: var(--black); margin-left: 2px; }
-        .audio-card-text { flex: 1; min-width: 0; }
-        .audio-card .audio-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 400; font-size: 15px; color: var(--black);
-            line-height: 1.3; margin-bottom: 5px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-        }
-        .audio-card .audio-date {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 11px; font-weight: 400;
-            color: var(--light); letter-spacing: 0.02em;
-            display: block; margin-bottom: 6px;
-        }
-
-        /* ─── ROW 2 — THREE COLUMNS ───────────────────────────────── */
-        .row-three {
-            display: grid; grid-template-columns: repeat(3, 1fr);
-            gap: 40px; padding: 28px 0 32px;
-            border-bottom: 1px solid var(--rule);
-        }
-        .row-three .article-headline { font-size: 24px; }
-
-        /* ─── ROW 3 — WIDE + STACK ────────────────────────────────── */
-        .row-wide-stack {
-            display: grid; grid-template-columns: 2fr 1fr;
-            gap: 40px; padding: 28px 0 32px;
-            border-bottom: 1px solid var(--rule);
-        }
-        .row-wide-stack .main .article-headline { font-size: 32px; letter-spacing: -0.01em; }
-        .row-wide-stack .stack {
-            display: flex; flex-direction: column; gap: 0;
-            border-left: 1px solid var(--rule); padding-left: 40px;
-        }
-        .row-wide-stack .stack-item {
-            padding-bottom: 20px; margin-bottom: 20px;
-            border-bottom: 1px solid var(--rule);
-        }
-        .row-wide-stack .stack-item:last-child { border-bottom: none; margin-bottom: 0; }
-        .row-wide-stack .stack-item .article-headline { font-size: 18px; }
-
-        /* ─── ROW 4 — FOUR COLUMNS ────────────────────────────────── */
-        .row-four {
-            display: grid; grid-template-columns: repeat(4, 1fr);
-            gap: 32px; padding: 28px 0 32px;
-            border-bottom: 1px solid var(--rule);
-        }
-        .row-four .article-headline { font-size: 19px; }
-        .row-four .article-dek { display: none; }
-
-        /* ─── ROW 5 — TWO COLUMNS ─────────────────────────────────── */
-        .row-two {
-            display: grid; grid-template-columns: repeat(2, 1fr);
-            gap: 40px; padding: 28px 0 32px;
-            border-bottom: 1px solid var(--rule);
-        }
-        .row-two .article-headline { font-size: 28px; }
-        .row-two .article-img { aspect-ratio: 16 / 9; }
-
-        /* ─── FOOTER ──────────────────────────────────────────────── */
-        footer {
-            margin-top: 60px; padding: 32px 40px;
-            border-top: 1px solid var(--rule-dark);
-            display: flex; align-items: center; justify-content: space-between;
-        }
-        .footer-logo .word-dice {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 300; font-style: italic; font-size: 22px; color: var(--black);
-        }
-        .footer-logo .word-floor {
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 300; font-size: 20px; color: var(--black); letter-spacing: 0.04em;
-        }
-        .footer-links {
-            display: flex; gap: 24px;
-            font-size: 12px; letter-spacing: 0.08em;
-            text-transform: uppercase; color: var(--mid);
-        }
-        .footer-links a:hover { color: var(--accent); }
-        .footer-copy { font-size: 12px; color: var(--light); }
-
-        /* ═══════════════════════════════════════════════════════════
-           MOBILE ELEMENTS — hidden on desktop
-        ═══════════════════════════════════════════════════════════ */
-        .mobile-header,
-        .mobile-nav-overlay,
-        .mobile-content { display: none; }
-
-        /* ═══════════════════════════════════════════════════════════
-           MOBILE BREAKPOINT
-        ═══════════════════════════════════════════════════════════ */
-        @media (max-width: 768px) {
-
-            /* Hide all desktop elements */
-            .util-bar,
-            .masthead,
-            .primary-nav,
-            hr.rule-dark,
-            .content { display: none !important; }
-
-            /* ─── MOBILE HEADER ───────────────────────────────────── */
-            .mobile-header {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 14px 16px;
-            }
-            .mobile-header .masthead-logo .word-dice {
-                font-family: 'Cormorant Garamond', serif;
-                font-weight: 300; font-style: italic;
-                font-size: 38px; color: var(--black); letter-spacing: -0.02em;
-            }
-            .mobile-header .masthead-logo .word-floor {
-                font-family: 'DM Sans', sans-serif;
-                font-weight: 300; font-size: 33px;
-                color: var(--black); letter-spacing: 0.04em; padding-left: 4px;
-            }
-
-            /* ─── HAMBURGER BUTTON ────────────────────────────────── */
-            .hamburger-btn {
-                background: none; border: none; cursor: pointer;
-                padding: 4px; display: flex; flex-direction: column;
-                gap: 5px; flex-shrink: 0;
-            }
-            .hamburger-btn span {
-                display: block; width: 22px; height: 1.5px; background: var(--black);
-            }
-
-            /* Mobile header separator lines */
-            .mobile-rule-dark {
-                display: block !important;
-                border: none; border-top: 1px solid var(--rule-dark);
-                margin: 0;
-            }
-            .mobile-rule-light {
-                display: block !important;
-                border: none; border-top: 1px solid var(--rule);
-                margin: 0 16px;
-            }
-
-            /* ─── MOBILE NAV OVERLAY ──────────────────────────────── */
-            .mobile-nav-overlay {
-                position: fixed; inset: 0;
-                background: #fff; z-index: 1000;
-                padding: 24px 24px 40px;
-                flex-direction: column;
-                /* starts hidden; .open makes it flex */
-            }
-            .mobile-nav-overlay.open { display: flex; }
-
-            .mobile-nav-header {
-                display: flex; align-items: center;
-                justify-content: center;
-                padding-bottom: 20px;
-                border-bottom: 1px solid var(--rule-dark);
-                margin-bottom: 8px;
-            }
-            .mobile-nav-menu {
-                display: flex; flex-direction: column; flex: 1;
-            }
-            .mobile-nav-menu a {
-                font-family: 'Cormorant Garamond', serif;
-                font-size: 26px; font-weight: 400; color: var(--black);
-                padding: 13px 0;
-                border-bottom: 1px solid var(--rule);
-                display: block; transition: color 0.15s;
-            }
-            .mobile-nav-menu a:hover { color: var(--accent); }
-
-            .mobile-nav-close-wrap {
-                margin-top: auto; padding-top: 32px;
-            }
-            .mobile-nav-close {
-                background: none; border: none; cursor: pointer; padding: 0;
-                display: flex; align-items: center; gap: 10px;
-                font-family: 'DM Sans', sans-serif;
-                font-size: 12px; font-weight: 500;
-                letter-spacing: 0.12em; text-transform: uppercase;
-                color: var(--mid);
-            }
-            .mobile-nav-close:hover { color: var(--accent); }
-            .mobile-nav-close .close-x {
-                font-size: 16px; line-height: 1;
-            }
-
-            /* ─── MOBILE CONTENT ──────────────────────────────────── */
-            .mobile-content {
-                display: block;
-                padding: 0 16px;
-            }
-
-            /* Mobile article card (rows 1, 3, 4, 5) */
-            .mobile-article {
-                padding: 20px 0;
-                border-bottom: 1px solid var(--rule);
-            }
-            .mobile-article .article-img {
-                display: block; width: 100%;
-                aspect-ratio: 3 / 2; object-fit: cover;
-                background: #e8e8e8; margin-bottom: 12px;
-            }
-            .mobile-article .article-headline {
-                font-family: 'Cormorant Garamond', serif;
-                font-size: 22px; font-weight: 400;
-                color: var(--black); line-height: 1.2; margin-bottom: 8px;
-            }
-            .mobile-article .article-footer {
-                display: flex; align-items: center;
-                justify-content: space-between; margin-top: 4px;
-            }
-
-            /* Mobile audio row (row 2) */
-            .mobile-audio-row {
-                padding: 20px 0;
-                border-bottom: 1px solid var(--rule);
-            }
-            .mobile-audio-row .tag {
-                display: block; margin-bottom: 14px;
-            }
-            .mobile-audio-grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 10px;
-            }
-            .mobile-audio-item .audio-thumb-wrap {
-                width: 100%; height: auto;
-                aspect-ratio: 1 / 1;
-                flex-shrink: unset;
-            }
-            .mobile-audio-item .audio-title {
-                font-family: 'Cormorant Garamond', serif;
-                font-size: 12px; font-weight: 400;
-                color: var(--black); line-height: 1.3;
-                margin-top: 6px; margin-bottom: 3px;
-                display: -webkit-box;
-                -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-            }
-            .mobile-audio-item .audio-date {
-                font-family: 'DM Sans', sans-serif;
-                font-size: 10px; color: var(--light);
-                letter-spacing: 0.02em;
-            }
-
-            /* Mobile footer */
-            footer {
-                flex-direction: column;
-                align-items: center;
-                gap: 16px; text-align: center;
-                padding: 28px 16px; margin-top: 0;
-            }
-            .footer-links { flex-wrap: wrap; justify-content: center; gap: 12px 16px; }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- ═══ MOBILE NAV OVERLAY ════════════════════════════════════ -->
-    <div class="mobile-nav-overlay" id="mobileNav">
-        <div class="mobile-nav-header">
-            <a href="#" class="masthead-logo">
-                <span class="word-dice" style="font-family:'Cormorant Garamond',serif;font-weight:300;font-style:italic;font-size:32px;color:#111;letter-spacing:-0.02em;">Dice</span><span class="word-floor" style="font-family:'DM Sans',sans-serif;font-weight:300;font-size:28px;color:#111;letter-spacing:0.04em;padding-left:4px;">Floor</span>
+    <!-- ROW 1 — HERO -->
+    {% assign hero = posts[0] %}
+    {% if hero %}
+    <div class="row-hero">
+        <div class="hero-main">
+            <span class="tag">{{ hero.category }}</span>
+            <a href="{{ hero.url | relative_url }}">
+                <img class="hero-top-img" src="{{ hero.image }}" alt="{{ hero.title }}" loading="lazy">
+                <h2 class="article-headline">{{ hero.title }}</h2>
             </a>
+            <p class="article-dek">{{ hero.excerpt }}</p>
+            <div class="article-footer">
+                <span class="article-meta">{% if hero.author %}By {{ hero.author }} &nbsp;·&nbsp; {% endif %}{{ hero.date | date: "%B %Y" }}</span>
+                <button class="speaker-btn" aria-label="Listen to article">
+                    <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                </button>
+            </div>
         </div>
-        <nav class="mobile-nav-menu">
-            <a href="#">Home</a>
-            <a href="#">Articles</a>
-            <a href="#">Cruise Lines</a>
-            <a href="#">Land Casinos</a>
-            <a href="#">Jobs</a>
-            <a href="#">Learning</a>
-            <a href="#">About</a>
-            <a href="#">FAQ</a>
-        </nav>
-        <div class="mobile-nav-close-wrap">
-            <button class="mobile-nav-close" onclick="document.getElementById('mobileNav').classList.remove('open')">
-                Close <span class="close-x">&#x2715;</span>
-            </button>
-        </div>
-    </div>
 
-    <!-- ═══ MOBILE HEADER (hidden on desktop) ════════════════════ -->
-    <div class="mobile-header">
-        <div style="width:30px"></div><!-- spacer to centre logo -->
-        <a href="#" class="masthead-logo">
-            <span class="word-dice">Dice</span><span class="word-floor">Floor</span>
-        </a>
-        <button class="hamburger-btn" aria-label="Open menu" onclick="document.getElementById('mobileNav').classList.add('open')">
-            <span></span><span></span><span></span>
-        </button>
-    </div>
-    <hr class="mobile-rule-dark" style="display:none">
-
-    <!-- ═══ DESKTOP UTILITY BAR ══════════════════════════════════ -->
-    <div class="util-bar">
-        <div class="util-left"><a href="#">learning</a></div>
-        <div class="util-right">
-            <a href="#">About</a>
-            <a href="#">FAQ</a>
+        <div class="hero-side">
+            <span class="tag">Listen</span>
+            {% for post in posts limit:5 %}
+            <div class="audio-card">
+                <div class="audio-thumb-wrap">
+                    <img src="{{ post.image }}" alt="{{ post.title }}">
+                    <div class="audio-play-overlay">
+                        <div class="audio-play-circle">
+                            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="audio-card-text">
+                    <h4 class="audio-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+                    <span class="audio-date">{{ post.date | date: "%B %Y" }}</span>
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </div>
+    {% endif %}
 
-    <!-- DESKTOP MASTHEAD -->
-    <div class="masthead">
-        <a href="#" class="masthead-logo">
-            <span class="word-dice">Dice</span><span class="word-floor">Floor</span>
-        </a>
+    <!-- ROW 2 — THREE COLUMNS -->
+    {% assign row2 = posts | slice: 1, 3 %}
+    {% if row2.size > 0 %}
+    <div class="row-three">
+        {% for post in row2 %}
+        <article>
+            <span class="tag">{{ post.category }}</span>
+            <a href="{{ post.url | relative_url }}">
+                <img class="article-img" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                <h3 class="article-headline">{{ post.title }}</h3>
+            </a>
+            <p class="article-dek">{{ post.excerpt }}</p>
+            <div class="article-footer">
+                <span class="article-meta">{{ post.date | date: "%B %Y" }}</span>
+                <button class="speaker-btn" aria-label="Listen to article">
+                    <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                </button>
+            </div>
+        </article>
+        {% endfor %}
     </div>
+    {% endif %}
 
-    <!-- SEPARATOR LINE 2 (above menu links) -->
-    <hr class="rule-dark">
-
-    <!-- PRIMARY NAV -->
-    <nav class="primary-nav">
-        <a href="#" class="active">Home</a>
-        <a href="#">Articles</a>
-        <a href="#">Cruise Lines</a>
-        <a href="#">Land Casinos</a>
-        <a href="#">Jobs</a>
-    </nav>
-
-    <!-- SEPARATOR LINE 1 (above top article row) -->
-    <hr class="rule-dark">
-
-    <!-- ═══ DESKTOP CONTENT ═══════════════════════════════════════ -->
-    <div class="content">
-
-        <!-- ROW 1 — HERO -->
-        <div class="row-hero">
-            <div class="hero-main">
-                <span class="tag">Cruise Lines</span>
-                <img class="hero-top-img" src="https://picsum.photos/seed/cruise1/1200/514" alt="Article image" loading="lazy">
-                <h2 class="article-headline">Inside the Dealer Shortage Reshaping Casino Cruise Operations Worldwide</h2>
-                <p class="article-dek">A wave of early retirements and stricter visa requirements has left shipboard gaming floors short-staffed heading into peak season — and operators are scrambling to fill the gap.</p>
+    <!-- ROW 3 — WIDE + STACK -->
+    {% assign row3_main = posts[4] %}
+    {% assign row3_stack = posts | slice: 5, 5 %}
+    {% if row3_main %}
+    <div class="row-wide-stack">
+        <div class="main">
+            <span class="tag">{{ row3_main.category }}</span>
+            <a href="{{ row3_main.url | relative_url }}">
+                <img class="article-img" src="{{ row3_main.image }}" alt="{{ row3_main.title }}" loading="lazy">
+                <h2 class="article-headline">{{ row3_main.title }}</h2>
+            </a>
+            <p class="article-dek">{{ row3_main.excerpt }}</p>
+            <div class="article-footer">
+                <span class="article-meta">{% if row3_main.author %}By {{ row3_main.author }} &nbsp;·&nbsp; {% endif %}{{ row3_main.date | date: "%B %Y" }}</span>
+                <button class="speaker-btn" aria-label="Listen to article">
+                    <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                </button>
+            </div>
+        </div>
+        {% if row3_stack.size > 0 %}
+        <div class="stack">
+            {% for post in row3_stack %}
+            <div class="stack-item">
+                <span class="tag">{{ post.category }}</span>
+                <h3 class="article-headline"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
                 <div class="article-footer">
-                    <span class="article-meta">By Staff Writer &nbsp;·&nbsp; March 2026</span>
+                    <span class="article-meta">{{ post.date | date: "%B %Y" }}</span>
                     <button class="speaker-btn" aria-label="Listen to article">
                         <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
                     </button>
                 </div>
             </div>
-
-            <div class="hero-side">
-                <span class="tag">Listen</span>
-                <div class="audio-card">
-                    <div class="audio-thumb-wrap">
-                        <img src="https://picsum.photos/seed/audio1/160/160" alt="Audio thumbnail">
-                        <div class="audio-play-overlay"><div class="audio-play-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-                    </div>
-                    <div class="audio-card-text">
-                        <h4 class="audio-title">Inside the Dealer Shortage Reshaping Casino Cruise Operations Worldwide</h4>
-                        <span class="audio-date">March 2026 &nbsp;·&nbsp; 8 min</span>
-                    </div>
-                </div>
-                <div class="audio-card">
-                    <div class="audio-thumb-wrap">
-                        <img src="https://picsum.photos/seed/audio2/160/160" alt="Audio thumbnail">
-                        <div class="audio-play-overlay"><div class="audio-play-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-                    </div>
-                    <div class="audio-card-text">
-                        <h4 class="audio-title">What Cruise Line Casinos Are Paying Dealers in 2026</h4>
-                        <span class="audio-date">March 2026 &nbsp;·&nbsp; 5 min</span>
-                    </div>
-                </div>
-                <div class="audio-card">
-                    <div class="audio-thumb-wrap">
-                        <img src="https://picsum.photos/seed/audio3/160/160" alt="Audio thumbnail">
-                        <div class="audio-play-overlay"><div class="audio-play-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-                    </div>
-                    <div class="audio-card-text">
-                        <h4 class="audio-title">Vegas vs. Macau: Where the Careers Are Heading Now</h4>
-                        <span class="audio-date">March 2026 &nbsp;·&nbsp; 6 min</span>
-                    </div>
-                </div>
-                <div class="audio-card">
-                    <div class="audio-thumb-wrap">
-                        <img src="https://picsum.photos/seed/audio4/160/160" alt="Audio thumbnail">
-                        <div class="audio-play-overlay"><div class="audio-play-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-                    </div>
-                    <div class="audio-card-text">
-                        <h4 class="audio-title">Breaking Into Maritime Gaming: A First-Timer's Honest Guide to Landing Your First Contract</h4>
-                        <span class="audio-date">February 2026 &nbsp;·&nbsp; 7 min</span>
-                    </div>
-                </div>
-                <div class="audio-card">
-                    <div class="audio-thumb-wrap">
-                        <img src="https://picsum.photos/seed/audio5/160/160" alt="Audio thumbnail">
-                        <div class="audio-play-overlay"><div class="audio-play-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-                    </div>
-                    <div class="audio-card-text">
-                        <h4 class="audio-title">The Psychology of the Pit: What Years of Dealing Teach You About People</h4>
-                        <span class="audio-date">March 2026 &nbsp;·&nbsp; 9 min</span>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
+        {% endif %}
+    </div>
+    {% endif %}
 
-        <!-- ROW 2 — THREE COLUMNS -->
-        <div class="row-three">
-            <article>
-                <span class="tag">Articles</span>
-                <img class="article-img" src="https://picsum.photos/seed/art1/600/375" alt="Article image" loading="lazy">
-                <h3 class="article-headline">The Unwritten Rules of the Casino Floor That No One Tells You</h3>
-                <p class="article-dek">Veteran dealers share the informal code that governs life in the pit — from tip etiquette to shift-end rituals.</p>
-                <div class="article-footer">
-                    <span class="article-meta">February 2026</span>
-                    <button class="speaker-btn" aria-label="Listen to article"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
-                </div>
-            </article>
-            <article>
-                <span class="tag">Cruise Lines</span>
-                <img class="article-img" src="https://picsum.photos/seed/cruise2/600/375" alt="Article image" loading="lazy">
-                <h3 class="article-headline">Contractual Minefields: Reading a Cruise Ship Employment Agreement</h3>
-                <p class="article-dek">Before you sign, understand the clauses that could affect your earnings, repatriation rights, and time off.</p>
-                <div class="article-footer">
-                    <span class="article-meta">February 2026</span>
-                    <button class="speaker-btn" aria-label="Listen to article"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
-                </div>
-            </article>
-            <article>
-                <span class="tag">Land Casinos</span>
-                <img class="article-img" src="https://picsum.photos/seed/land2/600/375" alt="Article image" loading="lazy">
-                <h3 class="article-headline">From Pit Boss to Director: A Career Map for Gaming Professionals</h3>
-                <p class="article-dek">The hierarchy looks simple from the outside. Those who climb it know the reality is far more complex.</p>
-                <div class="article-footer">
-                    <span class="article-meta">January 2026</span>
-                    <button class="speaker-btn" aria-label="Listen to article"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
-                </div>
-            </article>
-        </div>
-
-        <!-- ROW 3 — WIDE + STACK -->
-        <div class="row-wide-stack">
-            <div class="main">
-                <span class="tag">Land Casinos</span>
-                <img class="article-img" src="https://picsum.photos/seed/land3/800/450" alt="Article image" loading="lazy">
-                <h2 class="article-headline">The Regulated Markets Opening Up for Casino Professionals in 2026</h2>
-                <p class="article-dek">Japan, Brazil, and several Eastern European nations are rolling out licensing frameworks — creating thousands of new positions for experienced operators. Japan's integrated resort programme, long delayed by political friction, is finally</p>
-                <div class="article-footer">
-                    <span class="article-meta">By Staff Writer &nbsp;·&nbsp; March 2026</span>
-                    <button class="speaker-btn" aria-label="Listen to article"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
-                </div>
-            </div>
-            <div class="stack">
-                <div class="stack-item">
-                    <span class="tag">Jobs</span>
-                    <h3 class="article-headline">Certification Courses Worth Taking Before Your Next Application</h3>
-                    <div class="article-footer">
-                        <span class="article-meta">February 2026</span>
-                        <button class="speaker-btn" aria-label="Listen to article"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
-                    </div>
-                </div>
-                <div class="stack-item">
-                    <span class="tag">Articles</span>
-                    <h3 class="article-headline">How Background Checks Work Differently Across Gaming Jurisdictions</h3>
-                    <div class="article-footer">
-                        <span class="article-meta">January 2026</span>
-                        <button class="speaker-btn" aria-label="Listen to article"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
-                    </div>
-                </div>
-                <div class="stack-item">
-                    <span class="tag">Cruise Lines</span>
-                    <h3 class="article-headline">Eight Questions to Ask Before Accepting a Shipboard Casino Contract</h3>
-                    <div class="article-footer">
-                        <span class="article-meta">December 2025</span>
-                        <button class="speaker-btn" aria-label="Listen to article"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
-                    </div>
-                </div>
-                <div class="stack-item">
-                    <span class="tag">Land Casinos</span>
-                    <h3 class="article-headline">Life After the Strip: Why Tribal Casinos Are Becoming a Serious Career Destination</h3>
-                    <div class="article-footer">
-                        <span class="article-meta">December 2025</span>
-                        <button class="speaker-btn" aria-label="Listen to article"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
-                    </div>
-                </div>
-                <div class="stack-item">
-                    <span class="tag">Articles</span>
-                    <h3 class="article-headline">Gratuity Pools Explained: How the Math Works on Cruise Ship Casino Floors</h3>
-                    <div class="article-footer">
-                        <span class="article-meta">November 2025</span>
-                        <button class="speaker-btn" aria-label="Listen to article"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ROW 4 — FOUR COLUMNS -->
-        <div class="row-four">
-            <article>
-                <span class="tag">Jobs</span>
-                <img class="article-img" src="https://picsum.photos/seed/jobs3/500/313" alt="Article image" loading="lazy">
-                <h3 class="article-headline">Blackjack vs. Poker: Which Specialty Pays More at Sea?</h3>
-                <div class="article-footer">
-                    <span class="article-meta">March 2026</span>
-                    <button class="speaker-btn" aria-label="Listen to article"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
-                </div>
-            </article>
-            <article>
-                <span class="tag">Articles</span>
-                <img class="article-img" src="https://picsum.photos/seed/art3/500/313" alt="Article image" loading="lazy">
-                <h3 class="article-headline">The Quiet Rise of Electronic Table Games and What It Means for Dealers</h3>
-                <div class="article-footer">
-                    <span class="article-meta">February 2026</span>
-                    <button class="speaker-btn" aria-label="Listen to article"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
-                </div>
-            </article>
-            <article>
-                <span class="tag">Land Casinos</span>
-                <img class="article-img" src="https://picsum.photos/seed/land4/500/313" alt="Article image" loading="lazy">
-                <h3 class="article-headline">Life After the Strip: Tribal Casinos as a Career Destination</h3>
-                <div class="article-footer">
-                    <span class="article-meta">February 2026</span>
-                    <button class="speaker-btn" aria-label="Listen to article"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
-                </div>
-            </article>
-            <article>
-                <span class="tag">Cruise Lines</span>
-                <img class="article-img" src="https://picsum.photos/seed/cruise3/500/313" alt="Article image" loading="lazy">
-                <h3 class="article-headline">Gratuity Pools on Cruise Ships: How the Math Actually Works</h3>
-                <div class="article-footer">
-                    <span class="article-meta">January 2026</span>
-                    <button class="speaker-btn" aria-label="Listen to article"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
-                </div>
-            </article>
-        </div>
-
-        <!-- ROW 5 — TWO COLUMNS -->
-        <div class="row-two">
-            <article>
-                <span class="tag">Articles</span>
-                <img class="article-img" src="https://picsum.photos/seed/art4/700/394" alt="Article image" loading="lazy">
-                <h2 class="article-headline">The Psychology of the Pit: What Years of Dealing Teach You About People</h2>
-                <p class="article-dek">Casino dealers develop an acute read on human behaviour that few professions can match. Former pros reflect on what the job taught them — and what it cost.</p>
-                <div class="article-footer">
-                    <span class="article-meta">By Staff Writer &nbsp;·&nbsp; March 2026</span>
-                    <button class="speaker-btn" aria-label="Listen to article"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
-                </div>
-            </article>
-            <article>
-                <span class="tag">Jobs</span>
-                <img class="article-img" src="https://picsum.photos/seed/jobs4/700/394" alt="Article image" loading="lazy">
-                <h2 class="article-headline">Breaking Into Maritime Gaming: A First-Timer's Honest Guide</h2>
-                <p class="article-dek">No experience at sea? No existing contracts? Here's a realistic, step-by-step account of how new entrants are actually landing their first shipboard roles right now.</p>
-                <div class="article-footer">
-                    <span class="article-meta">By Staff Writer &nbsp;·&nbsp; February 2026</span>
-                    <button class="speaker-btn" aria-label="Listen to article"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
-                </div>
-            </article>
-        </div>
-
-    </div><!-- /desktop content -->
-
-    <!-- ═══ MOBILE CONTENT (hidden on desktop) ═══════════════════ -->
-    <div class="mobile-content">
-
-        <!-- MOBILE ROW 1 — hero article -->
-        <div class="mobile-article">
-            <span class="tag">Cruise Lines</span>
-            <img class="article-img" src="https://picsum.photos/seed/cruise1/750/500" alt="Article image" loading="lazy">
-            <h2 class="article-headline">Inside the Dealer Shortage Reshaping Casino Cruise Operations Worldwide</h2>
+    <!-- ROW 4 — FOUR COLUMNS -->
+    {% assign row4 = posts | slice: 10, 4 %}
+    {% if row4.size > 0 %}
+    <div class="row-four">
+        {% for post in row4 %}
+        <article>
+            <span class="tag">{{ post.category }}</span>
+            <a href="{{ post.url | relative_url }}">
+                <img class="article-img" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                <h3 class="article-headline">{{ post.title }}</h3>
+            </a>
             <div class="article-footer">
-                <span class="article-meta">By Staff Writer &nbsp;·&nbsp; March 2026</span>
-                <button class="speaker-btn" aria-label="Listen to article"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+                <span class="article-meta">{{ post.date | date: "%B %Y" }}</span>
+                <button class="speaker-btn" aria-label="Listen to article">
+                    <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                </button>
             </div>
-        </div>
+        </article>
+        {% endfor %}
+    </div>
+    {% endif %}
 
-        <!-- MOBILE ROW 2 — audio thumbnails -->
-        <div class="mobile-audio-row">
-            <span class="tag">Listen</span>
-            <div class="mobile-audio-grid">
-                <div class="mobile-audio-item">
-                    <div class="audio-thumb-wrap">
-                        <img src="https://picsum.photos/seed/audio1/160/160" alt="Audio thumbnail">
-                        <div class="audio-play-overlay"><div class="audio-play-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-                    </div>
-                    <p class="audio-title">Inside the Dealer Shortage Reshaping Casino Cruise Operations</p>
-                    <span class="audio-date">Mar 2026 · 8 min</span>
-                </div>
-                <div class="mobile-audio-item">
-                    <div class="audio-thumb-wrap">
-                        <img src="https://picsum.photos/seed/audio2/160/160" alt="Audio thumbnail">
-                        <div class="audio-play-overlay"><div class="audio-play-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-                    </div>
-                    <p class="audio-title">What Cruise Line Casinos Are Paying Dealers in 2026</p>
-                    <span class="audio-date">Mar 2026 · 5 min</span>
-                </div>
-                <div class="mobile-audio-item">
-                    <div class="audio-thumb-wrap">
-                        <img src="https://picsum.photos/seed/audio3/160/160" alt="Audio thumbnail">
-                        <div class="audio-play-overlay"><div class="audio-play-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-                    </div>
-                    <p class="audio-title">Vegas vs. Macau: Where the Careers Are Heading Now</p>
-                    <span class="audio-date">Mar 2026 · 6 min</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- MOBILE ROW 3 -->
-        <div class="mobile-article">
-            <span class="tag">Articles</span>
-            <img class="article-img" src="https://picsum.photos/seed/art1/750/500" alt="Article image" loading="lazy">
-            <h2 class="article-headline">The Unwritten Rules of the Casino Floor That No One Tells You</h2>
+    <!-- ROW 5 — TWO COLUMNS -->
+    {% assign row5 = posts | slice: 14, 2 %}
+    {% if row5.size > 0 %}
+    <div class="row-two">
+        {% for post in row5 %}
+        <article>
+            <span class="tag">{{ post.category }}</span>
+            <a href="{{ post.url | relative_url }}">
+                <img class="article-img" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                <h2 class="article-headline">{{ post.title }}</h2>
+            </a>
+            <p class="article-dek">{{ post.excerpt }}</p>
             <div class="article-footer">
-                <span class="article-meta">February 2026</span>
-                <button class="speaker-btn" aria-label="Listen to article"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+                <span class="article-meta">{% if post.author %}By {{ post.author }} &nbsp;·&nbsp; {% endif %}{{ post.date | date: "%B %Y" }}</span>
+                <button class="speaker-btn" aria-label="Listen to article">
+                    <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                </button>
             </div>
-        </div>
+        </article>
+        {% endfor %}
+    </div>
+    {% endif %}
 
-        <!-- MOBILE ROW 4 -->
-        <div class="mobile-article">
-            <span class="tag">Land Casinos</span>
-            <img class="article-img" src="https://picsum.photos/seed/land3/750/500" alt="Article image" loading="lazy">
-            <h2 class="article-headline">The Regulated Markets Opening Up for Casino Professionals in 2026</h2>
-            <div class="article-footer">
-                <span class="article-meta">By Staff Writer &nbsp;·&nbsp; March 2026</span>
-                <button class="speaker-btn" aria-label="Listen to article"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+</div><!-- /desktop content -->
+
+<!-- ═══ MOBILE CONTENT ════════════════════════════════════════════ -->
+<div class="mobile-content">
+
+    {% assign mob1 = posts[0] %}
+    {% if mob1 %}
+    <div class="mobile-article">
+        <span class="tag">{{ mob1.category }}</span>
+        <a href="{{ mob1.url | relative_url }}">
+            <img class="article-img" src="{{ mob1.image }}" alt="{{ mob1.title }}" loading="lazy">
+            <h2 class="article-headline">{{ mob1.title }}</h2>
+        </a>
+        <div class="article-footer">
+            <span class="article-meta">{{ mob1.date | date: "%B %Y" }}</span>
+            <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="mobile-audio-row">
+        <span class="tag">Listen</span>
+        <div class="mobile-audio-grid">
+            {% for post in posts limit:3 %}
+            <div class="mobile-audio-item">
+                <a href="{{ post.url | relative_url }}">
+                    <div class="audio-thumb-wrap">
+                        <img src="{{ post.image }}" alt="{{ post.title }}">
+                        <div class="audio-play-overlay">
+                            <div class="audio-play-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                        </div>
+                    </div>
+                </a>
+                <p class="audio-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></p>
+                <span class="audio-date">{{ post.date | date: "%b %Y" }}</span>
             </div>
+            {% endfor %}
         </div>
+    </div>
 
-        <!-- MOBILE ROW 5 -->
-        <div class="mobile-article" style="border-bottom: none;">
-            <span class="tag">Articles</span>
-            <img class="article-img" src="https://picsum.photos/seed/art4/750/500" alt="Article image" loading="lazy">
-            <h2 class="article-headline">The Psychology of the Pit: What Years of Dealing Teach You About People</h2>
-            <div class="article-footer">
-                <span class="article-meta">By Staff Writer &nbsp;·&nbsp; March 2026</span>
-                <button class="speaker-btn" aria-label="Listen to article"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
-            </div>
+    {% assign mob_articles = posts | slice: 1, 3 %}
+    {% for post in mob_articles %}
+    <div class="mobile-article">
+        <span class="tag">{{ post.category }}</span>
+        <a href="{{ post.url | relative_url }}">
+            <img class="article-img" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+            <h2 class="article-headline">{{ post.title }}</h2>
+        </a>
+        <div class="article-footer">
+            <span class="article-meta">{{ post.date | date: "%B %Y" }}</span>
+            <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
         </div>
+    </div>
+    {% endfor %}
 
-    </div><!-- /mobile content -->
-
-    <!-- FOOTER (shared) -->
-    <footer>
-        <div class="footer-logo">
-            <span class="word-dice">Dice</span><span class="word-floor">Floor</span>
-        </div>
-        <div class="footer-links">
-            <a href="#">Home</a>
-            <a href="#">Articles</a>
-            <a href="#">Cruise Lines</a>
-            <a href="#">Land Casinos</a>
-            <a href="#">Jobs</a>
-            <a href="#">About</a>
-            <a href="#">FAQ</a>
-        </div>
-        <div class="footer-copy">&copy; 2026 Dice Floor</div>
-    </footer>
-
-</body>
-</html>
+</div><!-- /mobile content -->

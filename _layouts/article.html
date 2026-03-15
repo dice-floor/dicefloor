@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<div class="content">
+    <article class="article-page">
+
+        <span class="tag">{{ page.category }}</span>
+        <h1 class="article-page-headline">{{ page.title }}</h1>
+        <p class="article-page-meta">
+            {% if page.author %}By {{ page.author }} &nbsp;·&nbsp; {% endif %}
+            {{ page.date | date: "%B %-d, %Y" }}
+        </p>
+
+        {% if page.audio %}
+        <div class="audio-player-wrap">
+            <button class="ap-play-btn" aria-label="Play / Pause">
+                <svg class="ap-icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="ap-icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+            </button>
+            <span class="ap-current">0:00</span>
+            <div class="ap-track">
+                <div class="ap-progress"></div>
+                <input class="ap-seek" type="range" min="0" max="100" value="0" step="0.1">
+            </div>
+            <span class="ap-duration">--:--</span>
+            <audio class="ap-audio" preload="metadata">
+                <source src="{{ page.audio | relative_url }}" type="audio/mpeg">
+            </audio>
+        </div>
+        {% endif %}
+
+        <div class="article-body">
+            {{ content }}
+        </div>
+
+        <div class="article-page-back">
+            <a href="{{ '/' | relative_url }}">&#8592; Back to Home</a>
+        </div>
+
+    </article>
+</div>
+
+<script src="{{ '/assets/js/audio-player.js' | relative_url }}"></script>
