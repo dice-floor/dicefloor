@@ -7,6 +7,44 @@
   <title>Dice Floor · CMS</title>
 </head>
 <body>
+  <script>
+    window.CMS_MANUAL_INIT = true;
+  </script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    CMS.init({
+      config: {
+        backend: {
+          name: 'github',
+          repo: 'dice-floor/dicefloor',
+          branch: 'main',
+          auth_type: 'pkce',
+          app_id: 'Ov23liEjPwPpaSu2X41R'
+        },
+        media_folder: 'assets/images',
+        public_folder: '/assets/images',
+        collections: [
+          {
+            name: 'posts',
+            label: 'Articles',
+            folder: '_posts',
+            create: true,
+            slug: '{{year}}-{{month}}-{{day}}-{{slug}}',
+            fields: [
+              { label: 'Layout', name: 'layout', widget: 'hidden', default: 'article' },
+              { label: 'Title', name: 'title', widget: 'string' },
+              { label: 'Category', name: 'category', widget: 'select', options: ['Cruise Lines', 'Land Casinos', 'Jobs', 'Articles', 'Learning'] },
+              { label: 'Author', name: 'author', widget: 'string', default: 'Staff Writer', required: false },
+              { label: 'Publish Date', name: 'date', widget: 'datetime' },
+              { label: 'Featured Image URL', name: 'image', widget: 'string', required: false },
+              { label: 'Audio File (MP3)', name: 'audio', widget: 'file', required: false },
+              { label: 'Excerpt', name: 'excerpt', widget: 'text' },
+              { label: 'Body', name: 'body', widget: 'markdown' }
+            ]
+          }
+        ]
+      }
+    });
+  </script>
 </body>
 </html>
