@@ -125,6 +125,19 @@ Matches existing homepage navigation:
 
 ---
 
+## Row 1 Hero — Planned Conversion to Agency Banner
+
+The current Row 1 hero article ("Inside the Dealer Shortage Reshaping Casino Cruise Operations Worldwide") will at some point be permanently replaced by a **job agency banner** — a fixed promotional placement for the cruise line and casino crew agency service.
+
+- **For now:** treat it as a normal article, part of the rotating homepage feed
+- **When the time comes:** Row 1 will be hardcoded as a permanent banner (outside the Jekyll article loop), and the rotating feed will begin at Row 2
+- **Trigger:** when agency partnerships with cruise lines and casinos are confirmed
+- This will require a separate design conversation and a dedicated banner layout
+
+No action needed now. Build Row 1 as a standard article slot initially.
+
+---
+
 ## Future Pages (not in scope for initial build)
 
 These are permanent product pages, not blog posts. Same header/footer/fonts as the rest of the site.
