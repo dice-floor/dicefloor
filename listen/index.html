@@ -10,7 +10,7 @@ title: Listen
             <hr class="articles-section-rule">
         </div>
 
-        {% assign audio_posts = site.posts | where_exp: "post", "post.audio != nil and post.audio != ''" %}
+        {% assign audio_posts = site.posts | where_exp: "post", "post.audio != ''" %}
 
         {% if audio_posts.size > 0 %}
         <div class="listen-grid">
