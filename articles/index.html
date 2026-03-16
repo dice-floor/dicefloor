@@ -2,43 +2,56 @@
 layout: default
 title: Articles
 ---
-<div class="content articles-index">
+<div class="content">
+    <div class="articles-row">
 
-    {% assign categories = "Cruise Lines,Land Casinos,Jobs" | split: "," %}
+        {% assign categories = "Cruise Lines,Land Casinos,Jobs" | split: "," %}
+        {% for cat in categories %}
+            {% assign cat_posts = site.posts | where: "category", cat %}
+            <div class="articles-col{% if forloop.first %} articles-col--first{% endif %}{% if forloop.last %} articles-col--last{% endif %}">
 
-    {% for cat in categories %}
-        {% assign cat_posts = site.posts | where: "category", cat %}
-        {% if cat_posts.size > 0 %}
-        <section class="articles-section">
+                <div class="articles-col-header">
+                    <span class="articles-section-label">{{ cat }}</span>
+                    <hr class="articles-section-rule">
+                </div>
 
-            <div class="articles-section-header">
-                <span class="articles-section-label">{{ cat }}</span>
-                <hr class="articles-section-rule">
-            </div>
-
-            <div class="articles-grid">
-                {% for post in cat_posts %}
-                <article class="articles-card">
-                    <a href="{{ post.url | relative_url }}" class="articles-card-img-link">
-                        <img src="{{ post.image }}" alt="{{ post.title }}" class="articles-card-img">
+                {% assign lead = cat_posts[0] %}
+                {% if lead %}
+                <div class="articles-col-lead">
+                    <a href="{{ lead.url | relative_url }}" class="articles-col-img-link">
+                        <img src="{{ lead.image }}" alt="{{ lead.title }}" class="articles-col-img">
                     </a>
-                    <div class="articles-card-body">
-                        <h3 class="articles-card-title">
-                            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                        </h3>
-                        <p class="articles-card-meta">
-                            {% assign words = post.content | number_of_words %}
-                            {% assign read_time = words | divided_by: 200 %}
-                            {% if read_time < 1 %}{% assign read_time = 1 %}{% endif %}
-                            {{ post.date | date: "%B %-d, %Y" }}&nbsp;·&nbsp;{{ read_time }} min read
-                        </p>
+                    <h3 class="articles-col-lead-title">
+                        <a href="{{ lead.url | relative_url }}">{{ lead.title }}</a>
+                    </h3>
+                    <div class="articles-col-footer">
+                        {% assign words = lead.content | number_of_words %}
+                        {% assign read_time = words | divided_by: 200 %}
+                        {% if read_time < 1 %}{% assign read_time = 1 %}{% endif %}
+                        <span class="articles-col-meta">{{ lead.date | date: "%b %-d, %Y" }}&nbsp;·&nbsp;{{ read_time }} min read</span>
+                        <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
                     </div>
-                </article>
+                </div>
+                {% endif %}
+
+                {% assign rest = cat_posts | slice: 1, 20 %}
+                {% for post in rest %}
+                <div class="articles-col-item">
+                    <h4 class="articles-col-item-title">
+                        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                    </h4>
+                    <div class="articles-col-footer">
+                        {% assign words = post.content | number_of_words %}
+                        {% assign read_time = words | divided_by: 200 %}
+                        {% if read_time < 1 %}{% assign read_time = 1 %}{% endif %}
+                        <span class="articles-col-meta">{{ post.date | date: "%b %-d, %Y" }}&nbsp;·&nbsp;{{ read_time }} min read</span>
+                        <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+                    </div>
+                </div>
                 {% endfor %}
+
             </div>
+        {% endfor %}
 
-        </section>
-        {% endif %}
-    {% endfor %}
-
+    </div>
 </div>
