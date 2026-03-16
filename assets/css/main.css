@@ -238,7 +238,10 @@ footer {
 }
 .article-page-meta {
     font-family: 'DM Sans', sans-serif;
-    font-size: 13px; color: var(--light); margin-bottom: 28px;
+    font-size: 13px; color: var(--light); margin-bottom: 20px;
+}
+.article-rule {
+    border: none; border-top: 1px solid var(--rule); margin: 0 0 28px;
 }
 .article-body {
     font-family: 'DM Sans', sans-serif;
@@ -314,6 +317,7 @@ footer {
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
     .util-bar, .masthead, .primary-nav, hr.rule-dark, .content { display: none !important; }
+    .content:has(.article-page) { display: block !important; }
 
     .mobile-header {
         display: flex; align-items: center;
