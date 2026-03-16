@@ -1,25 +1,44 @@
 ---
 layout: default
-title: All Articles
+title: Articles
 ---
-<div class="content" style="padding-top: 40px; padding-bottom: 80px;">
-    <h2 style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:36px; color:var(--black); margin-bottom:32px; letter-spacing:-0.01em;">All Articles</h2>
-    <div style="display:flex; flex-direction:column; gap:0;">
-        {% for post in site.posts %}
-        <div style="display:flex; gap:24px; align-items:flex-start; padding:20px 0; border-bottom:1px solid var(--rule);">
-            <a href="{{ post.url | relative_url }}" style="flex-shrink:0; width:120px; height:80px; overflow:hidden; background:#e8e8e8; display:block;">
-                <img src="{{ post.image }}" alt="{{ post.title }}" style="width:100%; height:100%; object-fit:cover;">
-            </a>
-            <div style="flex:1; min-width:0;">
-                <span class="tag">{{ post.category }}</span>
-                <h3 style="font-family:'Cormorant Garamond',serif; font-weight:400; font-size:20px; color:var(--black); line-height:1.2; margin-bottom:6px;">
-                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                </h3>
-                <p style="font-family:'DM Sans',sans-serif; font-size:12px; color:var(--light);">
-                    {% if post.author %}{{ post.author }} &nbsp;·&nbsp; {% endif %}{{ post.date | date: "%B %-d, %Y" }}
-                </p>
+<div class="content articles-index">
+
+    {% assign categories = "Cruise Lines,Land Casinos,Jobs" | split: "," %}
+
+    {% for cat in categories %}
+        {% assign cat_posts = site.posts | where: "category", cat %}
+        {% if cat_posts.size > 0 %}
+        <section class="articles-section">
+
+            <div class="articles-section-header">
+                <span class="articles-section-label">{{ cat }}</span>
+                <hr class="articles-section-rule">
             </div>
-        </div>
-        {% endfor %}
-    </div>
+
+            <div class="articles-grid">
+                {% for post in cat_posts %}
+                <article class="articles-card">
+                    <a href="{{ post.url | relative_url }}" class="articles-card-img-link">
+                        <img src="{{ post.image }}" alt="{{ post.title }}" class="articles-card-img">
+                    </a>
+                    <div class="articles-card-body">
+                        <h3 class="articles-card-title">
+                            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                        </h3>
+                        <p class="articles-card-meta">
+                            {% assign words = post.content | number_of_words %}
+                            {% assign read_time = words | divided_by: 200 %}
+                            {% if read_time < 1 %}{% assign read_time = 1 %}{% endif %}
+                            {{ post.date | date: "%B %-d, %Y" }}&nbsp;·&nbsp;{{ read_time }} min read
+                        </p>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+
+        </section>
+        {% endif %}
+    {% endfor %}
+
 </div>

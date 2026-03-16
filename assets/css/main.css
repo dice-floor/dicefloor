@@ -274,6 +274,47 @@ footer {
 .article-page-back a { color: var(--mid); transition: color 0.15s; }
 .article-page-back a:hover { color: var(--accent); }
 
+/* ─── ARTICLES INDEX PAGE ─────────────────────────────────────── */
+.articles-index { padding-top: 40px; padding-bottom: 80px; }
+
+.articles-section { margin-bottom: 56px; }
+
+.articles-section-header {
+    display: flex; align-items: center; gap: 16px; margin-bottom: 28px;
+}
+.articles-section-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); white-space: nowrap; flex-shrink: 0;
+}
+.articles-section-rule {
+    flex: 1; border: none; border-top: 1px solid var(--rule); margin: 0;
+}
+
+.articles-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px 40px;
+}
+
+.articles-card-img-link { display: block; overflow: hidden; background: #e8e8e8; }
+.articles-card-img {
+    display: block; width: 100%; aspect-ratio: 16 / 10;
+    object-fit: cover; transition: transform 0.3s ease;
+}
+.articles-card-img-link:hover .articles-card-img { transform: scale(1.03); }
+
+.articles-card-body { padding-top: 14px; }
+.articles-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400; font-size: 20px; color: var(--black);
+    line-height: 1.25; margin-bottom: 10px;
+}
+.articles-card-title a:hover { color: var(--accent); }
+.articles-card-meta {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; color: var(--light); letter-spacing: 0.02em;
+}
+
 /* ─── CUSTOM AUDIO PLAYER ─────────────────────────────────────── */
 .audio-player-wrap {
     display: flex; align-items: center; gap: 10px;
@@ -399,6 +440,9 @@ footer {
         display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
     }
     .mobile-audio-item .audio-date { font-family: 'DM Sans', sans-serif; font-size: 10px; color: var(--light); }
+
+    /* Articles index — mobile */
+    .articles-grid { grid-template-columns: 1fr; gap: 24px; }
 
     /* Article page — mobile */
     .article-page { padding: 24px 16px 60px; }
