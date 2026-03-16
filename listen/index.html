@@ -1,0 +1,41 @@
+---
+layout: default
+title: Listen
+---
+<div class="content">
+    <div class="listen-page">
+
+        <div class="listen-page-header">
+            <span class="articles-section-label">Listen</span>
+            <hr class="articles-section-rule">
+        </div>
+
+        {% assign audio_posts = site.posts | where_exp: "post", "post.audio != nil and post.audio != ''" %}
+
+        {% if audio_posts.size > 0 %}
+        <div class="listen-grid">
+            {% for post in audio_posts %}
+            <div class="listen-card">
+                <a href="{{ post.url | relative_url }}" class="listen-thumb-link">
+                    <div class="audio-thumb-wrap listen-thumb">
+                        <img src="{{ post.image }}" alt="{{ post.title }}">
+                        <div class="audio-play-overlay">
+                            <div class="audio-play-circle">
+                                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <h3 class="listen-card-title">
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h3>
+                <span class="listen-card-date">{{ post.date | date: "%b %Y" }}</span>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="listen-empty">Audio episodes coming soon.</p>
+        {% endif %}
+
+    </div>
+</div>

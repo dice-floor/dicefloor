@@ -11,6 +11,7 @@
         <a href="#">Cruise Lines</a>
         <a href="#">Land Casinos</a>
         <a href="#">Jobs</a>
+        <a href="{{ '/listen/' | relative_url }}">Listen</a>
         <a href="#">Learning</a>
         <a href="#">About</a>
         <a href="#">FAQ</a>
@@ -58,6 +59,7 @@
     <a href="#">Cruise Lines</a>
     <a href="#">Land Casinos</a>
     <a href="#">Jobs</a>
+    <a href="{{ '/listen/' | relative_url }}"{% if page.url contains '/listen' %} class="active"{% endif %}>Listen</a>
 </nav>
 
 <hr class="rule-dark">
