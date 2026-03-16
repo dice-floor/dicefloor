@@ -283,8 +283,7 @@ footer {
     padding: 0 36px;
     border-right: 1px solid var(--rule);
 }
-.articles-col--first { padding-left: 0; }
-.articles-col--last  { padding-right: 0; border-right: none; }
+.articles-col--last  { border-right: none; }
 
 .articles-col-header {
     display: flex; align-items: center; gap: 14px; margin-bottom: 20px;
