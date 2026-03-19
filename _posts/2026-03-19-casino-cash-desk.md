@@ -8,7 +8,7 @@ audio: ""
 excerpt: "Quieter than the pit, more independent than most roles on the floor, and with a faster track to management than many dealers realize."
 ---
 
-***Quieter than the pit, more independent than most roles on the floor, and with a faster track to management than many dealers realize***
+***Quieter than the pit, more independent than most roles on the floor, and with a faster track to management than many dealers realize.***
 
 Most people who enter the casino industry come through the pit. They train as dealers, they learn the games, and for many of them the pit is where their entire career unfolds. But there is another path running quietly alongside it — one that suits a different kind of person, carries its own distinct rewards, and offers a surprisingly fast route to senior positions. The cash desk is not glamorous in the way a busy Blackjack table can be, but for the right person, it is one of the most satisfying roles in the building.
 
