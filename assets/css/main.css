@@ -267,6 +267,43 @@ footer {
     font-size: 22px; font-style: italic; color: var(--mid); line-height: 1.4;
 }
 .article-body img { max-width: 100%; height: auto; margin: 24px 0; }
+
+/* ── Article tables ────────────────────────────────────────────── */
+.article-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 28px 0;
+    font-size: 15px;
+    font-family: 'DM Sans', sans-serif;
+}
+.article-body thead th {
+    background: var(--black);
+    color: #fff;
+    font-weight: 500;
+    text-align: left;
+    padding: 10px 14px;
+    letter-spacing: 0.03em;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.article-body tbody tr:nth-child(even) { background: #f5f5f5; }
+.article-body tbody tr:hover { background: #eeeeee; }
+.article-body td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--rule);
+    color: var(--ink);
+    vertical-align: top;
+}
+.article-body table em {
+    display: block;
+    margin-top: -16px;
+    margin-bottom: 28px;
+    font-size: 13px;
+    color: var(--mid);
+}
+/* Horizontal scroll on narrow viewports */
+.article-body table { display: block; overflow-x: auto; }
+
 .article-page-back {
     margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--rule);
     font-family: 'DM Sans', sans-serif; font-size: 13px; letter-spacing: 0.05em;
@@ -498,6 +535,9 @@ footer {
     .article-page { padding: 24px 16px 60px; }
     .article-page-headline { font-size: 28px; }
     .article-body { font-size: 16px; }
+
+    /* Tables — mobile: allow horizontal scroll */
+    .article-body table { font-size: 13px; }
 
     footer {
         flex-direction: column; align-items: center; gap: 16px;
