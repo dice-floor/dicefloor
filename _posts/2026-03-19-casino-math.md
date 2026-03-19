@@ -8,7 +8,6 @@ audio: ""
 excerpt: "The math behind why the casino wins — and why understanding it will make you a better manager and your dealers a more effective team"
 ---
 
-# Casino Advantage by Game: What Every Supervisor Needs to Know
 
 ***The math behind why the casino wins — and why understanding it will make you a better manager and your dealers a more effective team***
 
