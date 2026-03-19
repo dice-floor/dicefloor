@@ -1,4 +1,3 @@
----
 layout: article                                           
   title: "The Casino Cash Desk: A Hidden Career Path Worth Knowing About"                                                                                                                                                    
   category: Cruise Lines
