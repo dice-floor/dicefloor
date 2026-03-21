@@ -2,7 +2,7 @@
 layout: article
 title: "The Casino Cash Desk: A Hidden Career Path Worth Knowing About"
 category: Land Casinos, Cruise Lines
-author: Daniel
+author: DiceFloor
 image: "https://picsum.photos/seed/cruise1/900/600"
 audio: ""
 excerpt: "Quieter than the pit, more independent than most roles on the floor, and with a faster track to management than many dealers realize."
