@@ -1,35 +1,31 @@
 ---
-layout: article
+layout: about
 title: "About Dice Floor"
-category: ""
-author: ""
-image: ""
-audio: ""
-excerpt: "Nearly two decades in the casino industry — and a site built to share what took years to learn."
+excerpt: "Nearly two decades on the casino floor — and a site built to share what took years to learn."
 ---
 
-With nearly two decades in the casino industry, working for multiple international companies, the most challenging aspect has always been finding first-hand information from actual current or former employees — the kind that is genuinely useful when starting a casino career, or when looking to advance and get promoted to a higher position. The next challenge has always been finding job postings directly related to the casino industry without having to visit each casino's website separately. Most large job sites have everything cluttered in one place, and a dedicated casino section is almost never present, which makes them unreliable for this industry.
+Nearly two decades working in the casino industry across multiple international companies. In that time, the two things that were consistently difficult to find were honest, first-hand information from people who had actually done the job — and a single place to find casino-specific job openings without wading through generalist job boards where the industry barely registers.
 
-## What can you expect to find on Dice Floor?
+Dice Floor was built to fix both of those problems.
 
-**Blog Articles**
+## What you will find here
 
-Articles giving you detailed information on how to start your casino career. Tips and guidance on how to improve so you can advance and get promoted to your desired position. Interview preparation advice and questions worth asking during an interview.
+**Articles**
 
-The website targets mostly dealers, supervisors, cashiers, surveillance operators, and assistant managers. If you are part of higher management, you are unlikely to find content directly related to your position — but you are still welcome to read.
+Practical information on starting a casino career, advancing to the next level, and preparing for interviews. The content is aimed at dealers, supervisors, cashiers, surveillance operators, and assistant managers. Higher management is welcome to read — but most of what is here is written for the people working the floor.
 
 **Jobs**
 
-A jobs section is currently under active development, where current casino job openings will be posted to make it easier to find your desired position and apply. It is worth noting that Dice Floor does **not** accept CVs directly or conduct interviews. Any job postings on the website link directly to the employer or company's own website, where you can submit your application.
+A jobs section is currently in development. When it launches, it will list current casino openings with direct links to the employer's own application page. Dice Floor does not accept CVs and does not conduct interviews — the goal is simply to make the listings easier to find.
 
 **Courses**
 
-Dealer and cashier courses will initially be listed in the Jobs section. If interest in course searches grows, a dedicated section will be created.
+Dealer and cashier courses will be listed in the Jobs section initially. If there is enough interest, a dedicated section will follow.
 
 **Agents**
 
-At some point you may find an Agents section, listing carefully verified agents who provide casino industry employment services. If that section is created, all agents will be thoroughly checked for integrity and reliability — drawing on information not just from their own websites, but from current and former casino staff who have used their services. Why such thorough checks? While an agent's goal is to get you employed so they can collect their commission, not every agent operates with full transparency or good intentions. You can find more on this topic in the Agents category.
+A verified agents section may be added in future. If it is, every agent listed will be checked thoroughly — not just based on what they say about themselves, but on feedback from casino staff who have actually used their services. The casino employment world has its share of agents who do not operate with full transparency, and that section will reflect that reality honestly.
 
-## Discussion Groups
+## Community
 
-The main discussion groups are [r/DiceFloor](https://www.reddit.com/r/DiceFloor) on Reddit and the DiceFloor page on Facebook. Dice Floor does **not** have WhatsApp, Telegram, or Discord chats or groups. All announcements are posted only on dicefloor.com, Reddit, and Facebook.
+The main discussion spaces are [r/DiceFloor](https://www.reddit.com/r/DiceFloor) on Reddit and the Dice Floor page on Facebook. There are no WhatsApp, Telegram, or Discord groups. All announcements are posted on dicefloor.com, Reddit, and Facebook only.

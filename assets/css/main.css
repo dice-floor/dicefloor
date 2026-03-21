@@ -311,6 +311,27 @@ footer {
 .article-page-back a { color: var(--mid); transition: color 0.15s; }
 .article-page-back a:hover { color: var(--accent); }
 
+/* ── About page ────────────────────────────────────────────────── */
+.about-page { max-width: 680px; }
+.about-page .article-page-headline {
+    font-size: 38px;
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+.about-page .article-body h2 {
+    margin-top: 40px;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mid);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    border: none;
+    padding-bottom: 0;
+}
+.about-page .article-body p { font-size: 17px; line-height: 1.75; }
+.about-page .article-body strong { color: var(--black); }
+
 /* ─── ARTICLES INDEX PAGE ─────────────────────────────────────── */
 .articles-row {
     display: grid; grid-template-columns: repeat(3, 1fr);
