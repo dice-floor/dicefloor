@@ -2,7 +2,7 @@
 layout: article
 title: "The Surveillance Room: A Casino Career Path You Need to Think Carefully About"
 category: Land Casinos, Cruise Lines
-author: Daniel
+author: DiceFloor
 image: "https://picsum.photos/seed/cruise1/900/600"
 audio: ""
 excerpt: "Isolated, independent, and carrying more weight than most people realize — and in some casinos, a decision you cannot walk back"
