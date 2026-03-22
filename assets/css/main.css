@@ -97,7 +97,7 @@ a:hover { color: var(--accent); }
 }
 .article-dek {
     font-family: 'Source Sans 3', sans-serif;
-    font-size: 14px; font-weight: 300; color: var(--mid);
+    font-size: 14px; font-weight: 350; color: var(--mid);
     line-height: 1.55; margin-bottom: 10px;
 }
 .article-footer {
