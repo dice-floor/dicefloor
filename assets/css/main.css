@@ -245,7 +245,7 @@ footer {
 }
 .article-body {
     font-family: 'Source Sans 3', sans-serif;
-    font-size: 17px; font-weight: 300; line-height: 1.75; color: var(--ink);
+    font-size: 17px; font-weight: 400; line-height: 1.75; color: var(--ink);
 }
 .article-body h2 {
     font-family: 'Playfair Display', serif;
