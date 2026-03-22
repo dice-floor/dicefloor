@@ -46,12 +46,12 @@ a:hover { color: var(--accent); }
 .masthead-logo .word-dice {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300; font-style: italic; font-size: 62px;
-    color: var(--black); letter-spacing: -0.02em;
+    color: #c0392b; letter-spacing: -0.02em;
 }
 .masthead-logo .word-floor {
     font-family: 'DM Sans', sans-serif;
     font-weight: 300; font-size: 54px;
-    color: var(--black); letter-spacing: 0.04em; padding-left: 6px;
+    color: #1a1a1a; letter-spacing: 0.04em; padding-left: 6px;
 }
 
 /* ─── SEPARATOR LINES ─────────────────────────────────────────── */
@@ -216,11 +216,11 @@ footer {
 }
 .footer-logo .word-dice {
     font-family: 'Cormorant Garamond', serif;
-    font-weight: 300; font-style: italic; font-size: 22px; color: var(--black);
+    font-weight: 300; font-style: italic; font-size: 22px; color: #c0392b;
 }
 .footer-logo .word-floor {
     font-family: 'DM Sans', sans-serif;
-    font-weight: 300; font-size: 20px; color: var(--black); letter-spacing: 0.04em;
+    font-weight: 300; font-size: 20px; color: #1a1a1a; letter-spacing: 0.04em;
 }
 .footer-links {
     display: flex; gap: 24px; font-size: 12px;
@@ -470,12 +470,12 @@ footer {
     .mobile-header .masthead-logo .word-dice {
         font-family: 'Cormorant Garamond', serif;
         font-weight: 300; font-style: italic; font-size: 38px;
-        color: var(--black); letter-spacing: -0.02em;
+        color: #c0392b; letter-spacing: -0.02em;
     }
     .mobile-header .masthead-logo .word-floor {
         font-family: 'DM Sans', sans-serif;
         font-weight: 300; font-size: 33px;
-        color: var(--black); letter-spacing: 0.04em; padding-left: 4px;
+        color: #1a1a1a; letter-spacing: 0.04em; padding-left: 4px;
     }
     .hamburger-btn {
         background: none; border: none; cursor: pointer; padding: 4px;
