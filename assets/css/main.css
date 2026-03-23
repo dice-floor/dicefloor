@@ -452,6 +452,64 @@ footer {
 }
 
 /* ═══════════════════════════════════════════════════════════════
+   CASINO DIRECTORY
+═══════════════════════════════════════════════════════════════ */
+.casino-directory { max-width: 1100px; margin: 0 auto; padding: 40px 40px 80px; }
+.casino-directory__title {
+    font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 500;
+    color: var(--black); margin-bottom: 12px;
+}
+.casino-directory__intro {
+    font-family: 'Source Sans 3', sans-serif; font-size: 15px;
+    color: var(--mid); margin-bottom: 32px;
+}
+.casino-directory__nav {
+    display: flex; flex-wrap: wrap; gap: 8px 16px;
+    border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+    padding: 14px 0; margin-bottom: 48px;
+}
+.casino-directory__nav a {
+    font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.08em; color: var(--mid);
+    transition: color 0.15s;
+}
+.casino-directory__nav a:hover { color: var(--accent); }
+
+.casino-continent { margin-bottom: 56px; }
+.casino-continent__name {
+    font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 500;
+    color: var(--black); border-bottom: 2px solid var(--rule-dark);
+    padding-bottom: 8px; margin-bottom: 28px;
+}
+.casino-country { margin-bottom: 36px; }
+.casino-country__name {
+    font-family: 'Source Sans 3', sans-serif; font-size: 17px; font-weight: 600;
+    color: var(--ink); margin-bottom: 12px;
+}
+.casino-count { font-weight: 400; color: var(--light); font-size: 14px; }
+
+.casino-city { margin-bottom: 16px; }
+.casino-city__name {
+    font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.06em; color: var(--light);
+    margin-bottom: 6px;
+}
+.casino-list { padding-left: 0; }
+.casino-entry {
+    display: flex; align-items: baseline; gap: 10px;
+    padding: 5px 0; border-bottom: 1px solid #f0f0f0;
+    font-family: 'Source Sans 3', sans-serif;
+}
+.casino-entry__name { font-size: 15px; color: var(--ink); }
+.casino-entry__website, .casino-entry__source {
+    font-size: 12px; font-weight: 500; text-transform: uppercase;
+    letter-spacing: 0.06em; color: var(--accent); white-space: nowrap;
+    transition: opacity 0.15s;
+}
+.casino-entry__source { color: var(--light); }
+.casino-entry__website:hover, .casino-entry__source:hover { opacity: 0.7; }
+
+/* ═══════════════════════════════════════════════════════════════
    MOBILE ELEMENTS — hidden on desktop
 ═══════════════════════════════════════════════════════════════ */
 .mobile-header, .mobile-nav-overlay, .mobile-content { display: none; }
@@ -559,6 +617,13 @@ footer {
 
     /* Tables — mobile: allow horizontal scroll */
     .article-body table { font-size: 13px; }
+
+    /* Casino directory — mobile */
+    .content:has(.casino-directory) { display: block !important; }
+    .casino-directory { padding: 24px 16px 60px; }
+    .casino-directory__title { font-size: 26px; }
+    .casino-directory__nav { gap: 8px 12px; margin-bottom: 32px; }
+    .casino-continent__name { font-size: 20px; }
 
     footer {
         flex-direction: column; align-items: center; gap: 16px;

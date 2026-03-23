@@ -8,6 +8,11 @@ kramdown:
   input: GFM
 timezone: Europe/London
 
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
 exclude:
   - docs/
   - README.md
