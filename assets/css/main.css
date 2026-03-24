@@ -246,10 +246,10 @@ footer {
 }
 .article-share a {
     color: var(--light); transition: color 0.15s;
-    display: flex; align-items: center; line-height: 1;
+    display: flex; align-items: center; line-height: 1; flex-shrink: 0;
 }
 .article-share a:hover { color: var(--accent); }
-.article-share svg { width: 15px; height: 15px; }
+.article-share svg { width: 16px; height: 16px; display: block; flex-shrink: 0; }
 .article-rule {
     border: none; border-top: 1px solid var(--rule); margin: 0 0 28px;
 }
@@ -320,10 +320,10 @@ footer {
 }
 .article-page-share-row a {
     color: var(--light); transition: color 0.15s;
-    display: flex; align-items: center; line-height: 1;
+    display: flex; align-items: center; line-height: 1; flex-shrink: 0;
 }
 .article-page-share-row a:hover { color: var(--accent); }
-.article-page-share-row svg { width: 18px; height: 18px; }
+.article-page-share-row svg { width: 18px; height: 18px; display: block; flex-shrink: 0; }
 
 .article-page-back {
     margin-top: 0; padding-top: 24px; border-top: 1px solid var(--rule);
