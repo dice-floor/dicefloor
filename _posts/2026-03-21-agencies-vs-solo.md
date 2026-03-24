@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Agencies vs Solo Job Hunt: Which Path Is Right for You?"
-category: Land Casinos, Cruise Lines
+category: Casinos, Cruise Lines
 author: Staff Writer
 image: "https://picsum.photos/seed/cruise1/900/600"
 audio: ""

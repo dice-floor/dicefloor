@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Your Contract Was Terminated. Now What?"
-category: Land Casinos, Cruise Lines
+category: Casinos, Cruise Lines
 author: Staff Writer
 image: "https://picsum.photos/seed/cruise1/900/600"
 audio: ""

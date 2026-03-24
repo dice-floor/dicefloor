@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Employer References: Why You Might Want to Think Twice"
-category: Land Casinos, Cruise Lines
+category: Casinos, Cruise Lines
 author: Staff Writer
 image: "https://picsum.photos/seed/cruise1/900/600"
 audio: ""

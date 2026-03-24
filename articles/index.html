@@ -5,9 +5,9 @@ title: Articles
 <div class="content">
     <div class="articles-row">
 
-        {% assign categories = "Cruise Lines,Land Casinos,Jobs" | split: "," %}
+        {% assign categories = "Cruise Lines,Casinos,Jobs" | split: "," %}
         {% for cat in categories %}
-            {% assign cat_posts = site.posts | where: "category", cat %}
+            {% assign cat_posts = site.posts | where_exp: "post", "post.category contains cat" %}
             <div class="articles-col{% if forloop.first %} articles-col--first{% endif %}{% if forloop.last %} articles-col--last{% endif %}">
 
                 <div class="articles-col-header">

@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "The Casino Cash Desk: A Hidden Career Path Worth Knowing About"
-category: Land Casinos, Cruise Lines
+category: Casinos, Cruise Lines
 author: DiceFloor
 image: "https://picsum.photos/seed/cruise1/900/600"
 audio: ""

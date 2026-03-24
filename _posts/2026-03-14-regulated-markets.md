@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "The Regulated Markets Opening Up for Casino Professionals in 2026"
-category: Land Casinos
+category: Casinos
 author: Staff Writer
 image: "https://picsum.photos/seed/land3/900/600"
 audio: ""

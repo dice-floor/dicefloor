@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "The Surveillance Room: A Casino Career Path You Need to Think Carefully About"
-category: Land Casinos
+category: Casinos
 author: DiceFloor
 image: "https://picsum.photos/seed/cruise1/900/600"
 audio: ""

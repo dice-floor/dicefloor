@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Shuffling the Deck: Why I Traded My Land Casino Career for the Open Sea"
-category: Land Casinos, Cruise Lines
+category: Casinos, Cruise Lines
 author: Staff Writer
 image: "https://picsum.photos/seed/cruise1/900/600"
 audio: ""

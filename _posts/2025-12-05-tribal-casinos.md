@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Life After the Strip: Why Tribal Casinos Are Becoming a Serious Career Destination"
-category: Land Casinos
+category: Casinos
 author: Staff Writer
 image: "https://picsum.photos/seed/land4/900/600"
 audio: ""

@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "From Pit Boss to Director: A Career Map for Gaming Professionals"
-category: Land Casinos
+category: Casinos
 author: Staff Writer
 image: "https://picsum.photos/seed/land2/900/600"
 audio: ""
