@@ -5,6 +5,7 @@ category: Casinos, Cruise Lines
 author: Staff Writer
 image: "https://picsum.photos/seed/cruise1/900/600"
 audio: ""
+podcast_episode: ""
 excerpt: "Handing over your previous employer's contact details for a reference check seems routine. In this industry, it can quietly close doors you didn't know you still had open."
 ---
 

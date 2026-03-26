@@ -5,6 +5,7 @@ category: Articles
 author: Staff Writer
 image: "https://picsum.photos/seed/art4/900/600"
 audio: ""
+podcast_episode: ""
 excerpt: "Casino dealers develop an acute read on human behaviour that few professions can match. Former pros reflect on what the job taught them."
 ---
 

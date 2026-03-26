@@ -5,6 +5,7 @@ category: Casinos
 author: Staff Writer
 image: "https://picsum.photos/seed/land5/900/600"
 audio: ""
+podcast_episode: ""
 excerpt: "More professionals are choosing regional and tribal properties over the flagship properties. Here's why."
 ---
 

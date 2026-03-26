@@ -5,6 +5,7 @@ category: Jobs
 author: Staff Writer
 image: "https://picsum.photos/seed/jobs4/900/600"
 audio: ""
+podcast_episode: ""
 excerpt: "No experience at sea? No existing contracts? Here's a realistic account of how new entrants are landing their first shipboard roles."
 ---
 

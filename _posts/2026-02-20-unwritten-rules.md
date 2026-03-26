@@ -5,6 +5,7 @@ category: Articles
 author: Staff Writer
 image: "https://picsum.photos/seed/art1/900/600"
 audio: ""
+podcast_episode: ""
 excerpt: "Veteran dealers share the informal code that governs life in the pit — from tip etiquette to shift-end rituals."
 ---
 

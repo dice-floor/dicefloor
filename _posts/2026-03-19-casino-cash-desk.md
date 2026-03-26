@@ -5,6 +5,7 @@ category: Casinos, Cruise Lines
 author: DiceFloor
 image: "https://picsum.photos/seed/cruise1/900/600"
 audio: ""
+podcast_episode: ""
 excerpt: "Quieter than the pit, more independent than most roles on the floor, and with a faster track to management than many dealers realize."
 ---
 

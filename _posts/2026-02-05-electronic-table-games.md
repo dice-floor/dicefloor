@@ -5,6 +5,7 @@ category: Articles
 author: Staff Writer
 image: "https://picsum.photos/seed/art3/900/600"
 audio: ""
+podcast_episode: ""
 excerpt: "ETGs are taking floor space. Whether that's a threat or an opportunity depends on how you position yourself."
 ---
 

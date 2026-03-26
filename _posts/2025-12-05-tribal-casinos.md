@@ -5,6 +5,7 @@ category: Casinos
 author: Staff Writer
 image: "https://picsum.photos/seed/land4/900/600"
 audio: ""
+podcast_episode: ""
 excerpt: "Competitive pay, stable schedules, and genuine progression. The tribal casino sector is no longer second choice."
 ---
 

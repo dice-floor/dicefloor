@@ -5,6 +5,7 @@ category: Jobs
 author: Staff Writer
 image: "https://picsum.photos/seed/jobs2/900/600"
 audio: ""
+podcast_episode: ""
 excerpt: "The right certification can move your CV to the top of the pile. Here are the ones that actually matter."
 ---
 

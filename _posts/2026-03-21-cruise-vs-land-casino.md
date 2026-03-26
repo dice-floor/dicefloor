@@ -5,6 +5,7 @@ category: Casinos, Cruise Lines
 author: Staff Writer
 image: "https://picsum.photos/seed/cruise1/900/600"
 audio: ""
+podcast_episode: ""
 excerpt: "Three years on land, one contract at sea, and more professional growth than I had accumulated in all the years before. An honest comparison of two very different worlds."
 ---
 

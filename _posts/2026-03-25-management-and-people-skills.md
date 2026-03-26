@@ -6,6 +6,7 @@ category: Casinos
 author: Staff Writer
 image: "https://picsum.photos/seed/cruise1/900/600"
 audio: ""
+podcast_episode: ""
 excerpt: "The part of the job they do not teach you in training — and the part that determines whether your team actually performs."
 ---
 

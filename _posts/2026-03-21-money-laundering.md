@@ -5,6 +5,7 @@ category: Casinos, Cruise Lines
 author: Staff Writer
 image: "https://picsum.photos/seed/cruise1/900/600"
 audio: ""
+podcast_episode: ""
 excerpt: "The real threat to a casino isn't a card counter or a cheat team. It's the player who doesn't care if they lose — as long as the money comes out clean."
 ---
 

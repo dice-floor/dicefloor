@@ -5,6 +5,7 @@ category: Casinos, Cruise Lines
 author: Staff Writer
 image: "https://picsum.photos/seed/cruise1/900/600"
 audio: ""
+podcast_episode: ""
 excerpt: "There is no universal answer — but understanding the real differences between the two approaches will help you make the right choice for where you are right now."
 ---
 
@@ -32,13 +33,13 @@ None of this makes agencies a bad choice. It simply means that the trade you are
 
 Hunting independently is a different experience in almost every respect. The most immediate difference is scope. When you apply directly, you are not limited by any agency's network or partner list. The entire industry is available to you — every company, every country, every contract type, across every continent that has a casino floor. You can apply to a boutique land casino in Monaco and a major cruise line in the same week, compare the responses, and make a decision based on which offer suits you best. Nobody else's commercial relationship influences what lands in front of you.
 
-The freedom extends to timing as well. You move at your own pace, prioritise the companies that interest you most, and take the time to research the employers you are considering in genuine depth. When an offer comes in, you are negotiating directly with the decision-maker, which means the conversation can be as broad or as detailed as you choose to make it. Salary is one variable among many. Start dates, contract length, game coverage, relocation support, rotation schedules — all of it is potentially on the table if you approach the conversation with confidence and the right amount of preparation.
+The freedom extends to timing as well. You move at your own pace, prioritize the companies that interest you most, and take the time to research the employers you are considering in genuine depth. When an offer comes in, you are negotiating directly with the decision-maker, which means the conversation can be as broad or as detailed as you choose to make it. Salary is one variable among many. Start dates, contract length, game coverage, relocation support, rotation schedules — all of it is potentially on the table if you approach the conversation with confidence and the right amount of preparation.
 
 Your only obligation, once you accept a role, is to the company itself. There is no agency layer, no intermediary contract, no third party whose terms govern your employment. The relationship is direct, and direct relationships are generally easier to manage, easier to build on, and easier to exit cleanly when the time comes to move on.
 
 ## The Cost of That Freedom
 
-The solo route is not without its demands. It is more time-consuming, more administratively intensive, and requires a level of self-direction that not everyone finds natural when they are already managing the other aspects of their working life. You are responsible for finding the leads, writing the applications, chasing the responses, preparing for the tests, and managing the logistics of any visa or relocation requirements without a dedicated person in your corner. All of the support that an agency provides by default, you have to source and organise yourself.
+The solo route is not without its demands. It is more time-consuming, more administratively intensive, and requires a level of self-direction that not everyone finds natural when they are already managing the other aspects of their working life. You are responsible for finding the leads, writing the applications, chasing the responses, preparing for the tests, and managing the logistics of any visa or relocation requirements without a dedicated person in your corner. All of the support that an agency provides by default, you have to source and organize yourself.
 
 For a newer dealer who does not yet have a strong sense of the landscape — who the major employers are, what the standard contract terms look like, what to expect from a table test at a particular type of casino — this can be genuinely disorienting. The industry has its own rhythms, its own terminology, its own unwritten standards, and navigating them without guidance takes longer and produces more uncertainty along the way.
 

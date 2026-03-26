@@ -5,6 +5,7 @@ category: Casinos, Cruise Lines
 author: Staff Writer
 image: "https://picsum.photos/seed/cruise1/900/600"
 audio: ""
+podcast_episode: ""
 excerpt: "Before you invest your savings in a 'guaranteed' job offer, read this. Casino recruitment scams are sophisticated, widespread — and entirely preventable if you know what to look for."
 ---
 
@@ -14,7 +15,7 @@ While legitimate job agencies provide valuable services connecting qualified can
 
 ## Understanding the Types of Job Agents
 
-Before diving into scam tactics, it's worth understanding how legitimate casino recruitment works — so you can recognise when something deviates from normal industry practice.
+Before diving into scam tactics, it's worth understanding how legitimate casino recruitment works — so you can recognize when something deviates from normal industry practice.
 
 ### Legitimate HR Recruitment Companies
 
@@ -107,7 +108,7 @@ Reach out discreetly to former and current employees who used the same agent. Th
 
 **Step 3 — Report to the employer**
 
-Visit the actual casino or cruise line's official website, scroll to the bottom, and look for links labelled "Whistleblower," "Report Fraud," "Ethics Hotline," or "Report Misconduct." Most large companies use third-party services that allow anonymous reporting.
+Visit the actual casino or cruise line's official website, scroll to the bottom, and look for links labeled "Whistleblower," "Report Fraud," "Ethics Hotline," or "Report Misconduct." Most large companies use third-party services that allow anonymous reporting.
 
 **Step 4 — Create anonymous communication channels**
 
@@ -115,7 +116,7 @@ If you need to remain anonymous to protect your employment: use a VPN, create a 
 
 **Step 5 — Report to authorities**
 
-Depending on your location: consumer protection agencies, labour authorities, immigration authorities (if visa fraud is involved), local police, and gaming industry regulatory bodies are all legitimate avenues.
+Depending on your location: consumer protection agencies, labor authorities, immigration authorities (if visa fraud is involved), local police, and gaming industry regulatory bodies are all legitimate avenues.
 
 **Critical safety tips:**
 - Never use company email accounts or servers to communicate about the scam
@@ -149,7 +150,7 @@ For comparison, here's how genuine casino recruitment typically works:
 
 ## Final Thoughts
 
-The casino industry offers genuine opportunities for exciting, well-paid careers around the world. Don't let fear of scams prevent you from pursuing legitimate opportunities — but approach recruitment with healthy scepticism and thorough research.
+The casino industry offers genuine opportunities for exciting, well-paid careers around the world. Don't let fear of scams prevent you from pursuing legitimate opportunities — but approach recruitment with healthy skepticism and thorough research.
 
 If someone is asking you to pay thousands for the privilege of working, something is wrong. Legitimate employers invest in their employees, not the other way around.
 

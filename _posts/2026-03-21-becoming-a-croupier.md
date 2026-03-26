@@ -5,6 +5,7 @@ category: Casinos, Cruise Lines
 author: Staff Writer
 image: "https://picsum.photos/seed/cruise1/900/600"
 audio: ""
+podcast_episode: ""
 excerpt: "You don't need special skills to become a dealer. You need practice, the right tools, and the patience to let experience do the rest."
 ---
 
@@ -20,7 +21,7 @@ And here's something worth saying clearly: I've seen dealers who had zero maths 
 
 ## What You Can Expect to Learn
 
-Most courses start with chip handling. This applies to both cash chips and colour chips — there's a slight difference between them, and different sizes within the colour chip family. From there, you'll typically move into the most popular games found in most casinos: Roulette, Blackjack, Three Card Poker, and Five Card Poker. There may be other games included depending on your school, but those are the most common.
+Most courses start with chip handling. This applies to both cash chips and color chips — there's a slight difference between them, and different sizes within the color chip family. From there, you'll typically move into the most popular games found in most casinos: Roulette, Blackjack, Three Card Poker, and Five Card Poker. There may be other games included depending on your school, but those are the most common.
 
 One thing worth clarifying early: if you're training for a land casino outside the US, you'll most likely learn European Roulette. If you're being trained to join a cruise ship, you'll learn American Roulette. American Roulette has both a 0 and a 00. European Roulette has only one 0, along with some additional bets that aren't worth getting into here. Your school will cover what's relevant to where you're headed.
 
@@ -34,18 +35,18 @@ Card games — Three and Five Card Poker plus Blackjack — typically follow. Ro
 
 ## Practical Tips to Get Ahead
 
-The dealers who progress fastest are almost always the ones who practise at home between sessions. A few inexpensive purchases will make a real difference.
+The dealers who progress fastest are almost always the ones who practice at home between sessions. A few inexpensive purchases will make a real difference.
 
-Pick up a few decks of cards from a local card dealer — they typically cost $5–$10. Practise shuffling whenever you feel like it. Most casinos are trying to switch to automatic shuffling machines, but they break, and when the machine breaks, you'll need to shuffle manually. You don't want to be the dealer who can't do it properly.
+Pick up a few decks of cards from a local card dealer — they typically cost $5–$10. practice shuffling whenever you feel like it. Most casinos are trying to switch to automatic shuffling machines, but they break, and when the machine breaks, you'll need to shuffle manually. You don't want to be the dealer who can't do it properly.
 
 Get a cheap four-deck Blackjack shoe from AliExpress for around $5–$15, along with a set of cutting cards. Cut the cards in half when placing them in the shoe so you're practising both dealing and shuffling regularly.
 
-For Roulette, find the actual layout dimensions, draw all the numbers on a large cardboard sheet, and use a small object as a dolly — the small marker dealers place on the winning number. Cover the cardboard with a thick cloth, then practise placing the dolly on specific numbers and checking your accuracy. This exercise might seem pointless at first. But in a very busy Roulette game, you may not be able to see the numbers at all because every position is covered with chips. When that happens, you'll be glad you did it.
+For Roulette, find the actual layout dimensions, draw all the numbers on a large cardboard sheet, and use a small object as a dolly — the small marker dealers place on the winning number. Cover the cardboard with a thick cloth, then practice placing the dolly on specific numbers and checking your accuracy. This exercise might seem pointless at first. But in a very busy Roulette game, you may not be able to see the numbers at all because every position is covered with chips. When that happens, you'll be glad you did it.
 
-If you can, get an actual casino-sized Blackjack layout rather than dealing on a kitchen table. Casino layouts are padded with a thin foam layer underneath, which makes handling cards and chips feel completely different to a hard surface. And two stacks of 20 chips each will give you more than enough to practise chip handling at home — cutting, stacking, and simply getting used to how a 20-chip stack feels in your hand. It's very easy to accidentally make a 19 or 21 chip stack, which leads to overpaying or underpaying a customer.
+If you can, get an actual casino-sized Blackjack layout rather than dealing on a kitchen table. Casino layouts are padded with a thin foam layer underneath, which makes handling cards and chips feel completely different to a hard surface. And two stacks of 20 chips each will give you more than enough to practice chip handling at home — cutting, stacking, and simply getting used to how a 20-chip stack feels in your hand. It's very easy to accidentally make a 19 or 21 chip stack, which leads to overpaying or underpaying a customer.
 
 ## The Final Word
 
 Some people feel under significant stress when they start on the floor. That's completely normal — the pace is fast, the stakes are real, and there's a lot to hold in your head at once. What separates the dealers who settle in quickly from those who struggle is almost never raw talent. It's the work they put in during the course and the habits they build in the early months.
 
-Follow the procedures. Practise at home. Ask questions when something doesn't make sense. The floor is one of those environments where consistent effort compounds quickly — and the learning curve, steep as it feels at first, levels out faster than you expect.
+Follow the procedures. practice at home. Ask questions when something doesn't make sense. The floor is one of those environments where consistent effort compounds quickly — and the learning curve, steep as it feels at first, levels out faster than you expect.

@@ -5,6 +5,7 @@ category: Casinos
 author: DiceFloor
 image: "https://picsum.photos/seed/cruise1/900/600"
 audio: ""
+podcast_episode: ""
 excerpt: "Isolated, independent, and carrying more weight than most people realize — and in some casinos, a decision you cannot walk back"
 ---
 

@@ -6,6 +6,7 @@ category: Casinos
 author: Staff Writer
 image: "https://picsum.photos/seed/cruise1/900/600"
 audio: ""
+podcast_episode: ""
 excerpt: "A thousand years of human ingenuity, compressed into 52 rectangles — and one card that could get you hanged."
 ---
 

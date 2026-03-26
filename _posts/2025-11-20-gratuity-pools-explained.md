@@ -5,6 +5,7 @@ category: Articles
 author: Staff Writer
 image: "https://picsum.photos/seed/cruise5/900/600"
 audio: ""
+podcast_episode: ""
 excerpt: "Tipping structures vary wildly between operators. Here's how to calculate what you'll actually take home."
 ---
 
