@@ -3,7 +3,7 @@ layout: article
 title: "Employer References: Why You Might Want to Think Twice"
 category: Casinos, Cruise Lines
 author: Staff Writer
-image: "https://picsum.photos/seed/cruise1/900/600"
+image: "/assets/images/employer-references.png"
 audio: ""
 podcast_episode: ""
 excerpt: "Handing over your previous employer's contact details for a reference check seems routine. In this industry, it can quietly close doors you didn't know you still had open."

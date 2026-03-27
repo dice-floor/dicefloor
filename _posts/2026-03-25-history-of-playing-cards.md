@@ -4,7 +4,7 @@ title: "The History of Playing Cards: From Ancient China to the Casino Floor"
 date: 2026-03-25
 category: Casinos
 author: Staff Writer
-image: "https://picsum.photos/seed/cruise1/900/600"
+image: "/assets/images/history-of-playing-cards.png"
 audio: ""
 podcast_episode: ""
 excerpt: "A thousand years of human ingenuity, compressed into 52 rectangles — and one card that could get you hanged."

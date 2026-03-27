@@ -3,7 +3,7 @@ layout: article
 title: "Agencies vs Solo Job Hunt: Which Path Is Right for You?"
 category: Casinos, Cruise Lines
 author: Staff Writer
-image: "https://picsum.photos/seed/cruise1/900/600"
+image: "/assets/images/agencies-vs-solo.png"
 audio: ""
 podcast_episode: ""
 excerpt: "There is no universal answer — but understanding the real differences between the two approaches will help you make the right choice for where you are right now."
