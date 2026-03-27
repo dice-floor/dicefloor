@@ -4,7 +4,7 @@ title: "Management and People Skills"
 date: 2026-03-25
 category: Casinos
 author: Staff Writer
-image: "https://picsum.photos/seed/cruise1/900/600"
+image: "/assets/images/management-and-people-skills.png"
 audio: ""
 podcast_episode: ""
 excerpt: "The part of the job they do not teach you in training — and the part that determines whether your team actually performs."
