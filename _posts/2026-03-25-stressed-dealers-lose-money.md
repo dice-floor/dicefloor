@@ -14,7 +14,6 @@ There is a version of casino management that treats pressure as a motivational t
 
 This is wrong, and the evidence for it is visible on any floor where it is being practiced, if you know what to look at. Stressed dealers do not perform better. They perform worse, in ways that are measurable, predictable, and entirely avoidable. And in the cases where the stress is applied by someone who should know better, the damage goes beyond unintentional error. Experienced dealers who are being pushed without cause have tools available to them that most managers would prefer not to think about — and they use them.
 
----
 
 ## What Stress Actually Does to Game Performance
 
@@ -24,7 +23,6 @@ Add stress to that equation and the available capacity shrinks. The dealer who w
 
 A calm dealer, even one who is not particularly experienced, can run a tighter game than a stressed dealer with years of floor time. Focus is the primary variable in game quality, and focus is exactly what stress degrades. This is not a matter of character or work ethic — it is simple cognitive mechanics. The conditions under which a dealer works determine, to a very significant degree, the quality of the work they produce.
 
----
 
 ## The Slower Game, the Lower Win
 
@@ -34,13 +32,12 @@ This is the part of the stress-and-performance equation that management should c
 
 The damage scales with the size of the floor. One stressed dealer on one table in an otherwise calm shift makes a noticeable but limited difference. Stress a full shift — an atmosphere where every dealer on the floor is dealing with pressure from above — and the aggregate effect on hands per hour, game quality, and payout frequency becomes genuinely significant. The maths that the house edge promises is not delivered automatically. It is delivered by dealers who can focus, and focus requires the right conditions.
 
----
 
 ## The Part That Nobody Likes to Say Out Loud
 
 Now for the part of this conversation that tends to make managers uncomfortable, but that anyone with serious floor experience already knows.
 
-Experienced dealers understand their games in ways that go beyond simply executing procedure correctly. They know the rhythm of a shoe. They know how their mechanics affect the pace and texture of a game. They know, if they choose to use that knowledge, how to run a table in ways that are subtly more favourable to the players sitting across from them — not through cheating, nothing that would show up in a review of procedure, but through the hundred small choices that a confident, experienced dealer makes on every shift. The speed of a deal. The energy brought to a table. The degree of control applied in moments where control is available. The difference between a dealer who is working with the house and a dealer who has decided, quietly and without announcement, to let the game run a different way.
+Experienced dealers understand their games in ways that go beyond simply executing procedure correctly. They know the rhythm of a shoe. They know how their mechanics affect the pace and texture of a game. They know, if they choose to use that knowledge, how to run a table in ways that are subtly more favorable to the players sitting across from them — not through cheating, nothing that would show up in a review of procedure, but through the hundred small choices that a confident, experienced dealer makes on every shift. The speed of a deal. The energy brought to a table. The degree of control applied in moments where control is available. The difference between a dealer who is working with the house and a dealer who has decided, quietly and without announcement, to let the game run a different way.
 
 Experienced dealers put under consistent, unjustified pressure by supervisors who do not know what they are doing will eventually reach a point where they make that choice. Not all of them, and not immediately, but enough of them, often enough, to matter. This is not presented here as something to be admired or encouraged. It is presented as something that happens, and that management should understand as a real consequence of a particular management style.
 
@@ -48,7 +45,6 @@ One dealer making that choice on one shift will not move the numbers in any visi
 
 The protection against this is not tighter surveillance and more pressure. It is management that earns the respect of the team by treating them as professionals, managing from knowledge rather than anxiety, and reserving remarks for situations that actually warrant them.
 
----
 
 ## A Floor That Taught the Lesson Directly
 
@@ -62,7 +58,6 @@ That pattern — the inexperienced supervisor who makes the floor harder rather 
 
 One other thing worth remembering, if a supervisor or manager decides to make things personal rather than professional: they deal with the same environment, the same pressure, and the same scrutiny that they apply to their dealers. They make mistakes too. Attention is a tool that works in more than one direction.
 
----
 
 ## What the Right Environment Actually Looks Like
 
@@ -72,6 +67,5 @@ This is not a soft argument about feelings. It is a revenue argument with a dire
 
 Dealers are not variables in a formula. They are the formula. Treat them accordingly.
 
----
 
 *The supervisor who makes a difficult shift harder is not managing the floor. They are managing their own discomfort at the dealer's expense. The floor notices the difference.*

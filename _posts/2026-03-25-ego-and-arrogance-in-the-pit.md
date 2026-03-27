@@ -14,7 +14,6 @@ There is a concept in psychology that casino floors illustrate with remarkable r
 
 Promotions happen fast in the casino industry. The floor is always short of supervisors, contracts create gaps, and a dealer who shows initiative and handles themselves well can find themselves behind the pit desk faster than their actual depth of experience justifies. This is not always a problem — plenty of people rise quickly and grow into the role effectively. But when the promotion comes too early and the new supervisor has not yet accumulated the floor time that builds genuine judgment, the gaps tend to show up in exactly the moments that matter most.
 
----
 
 ## What Floor Time Actually Teaches You
 
@@ -24,7 +23,6 @@ A dealer who has spent years at the tables develops something that cannot be acq
 
 Beyond psychology, extended floor time means exposure to an enormous range of situations — disputes, irregularities, difficult guests, unusual betting patterns, procedural edge cases. A supervisor who has seen most of these situations before has responses that come from experience. A supervisor who has not seen them arrives at each one without that foundation, and has to construct a response in real time, in front of the team, under pressure. Sometimes that goes well. Often it does not.
 
----
 
 ## The Dunning-Kruger Problem in the Pit
 
@@ -34,7 +32,6 @@ This is different from arrogance, and the distinction matters. A genuinely inexp
 
 The tell is consistent, once you know what to look for. When something goes wrong at the tables and the supervisor's first move is to find someone to blame rather than to resolve the situation, you are probably watching the second kind of person. The experienced supervisor who made a call that did not work out will own it, correct it, and move forward. The arrogant one will make sure everyone knows it was not their fault, and the pit will feel the weight of that for the rest of the shift.
 
----
 
 ## What Stress Does to a Pit
 
@@ -44,7 +41,6 @@ Slower game pace means fewer hands per hour. Fewer hands per hour means less the
 
 Break lists and rotation schedules are a specific area where supervisory inexperience makes itself felt with particular regularity. Getting the rotations right — keeping dealers fresh, distributing the more demanding tables fairly, timing breaks so that the floor maintains its pace — requires a feel for the room that develops over time. A supervisor who cannot balance this creates a team that is either overtired, resentful, or both. None of those states produce good casino results.
 
----
 
 ## The Dealer's Perspective — and What Some Do About It
 
@@ -52,7 +48,6 @@ Having watched this play out from every position on the floor — as a dealer, a
 
 This goodwill, however, is not infinite. And it is not equally extended to the struggling supervisor and the arrogant one. A supervisor who is clearly finding their feet, who acknowledges that and shows genuine effort, tends to receive patience from the team around them. A supervisor who projects confidence they have not earned, who reaches for blame when things go wrong, and who makes the floor harder to work on than it needs to be — that supervisor will find that the patience has limits, and that the experienced dealers around them have more than one way to make their view of the situation known.
 
----
 
 ## What Good Actually Looks Like
 
@@ -62,6 +57,5 @@ They also know what they do not yet know, and they are not threatened by that. A
 
 The industry promotes quickly by necessity. That will not change. But the pace of promotion does not have to determine the quality of what follows it. The gap between experience and role can be closed over time — provided the person in the role is honest enough with themselves to keep closing it, rather than defending the gap with noise.
 
----
 
 *The easiest supervisors to work for are the ones who remember what it was like to be a dealer. The hardest ones to work for are the ones who have already forgotten.*

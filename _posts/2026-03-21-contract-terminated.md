@@ -35,9 +35,9 @@ That means updating your resume promptly, opening your job search without delay,
 
 Drop the ego. That phrase sounds harsh, but it is one of the most career-protecting things you can do in this situation. The ego wants to be vindicated. It wants an audience for the injustice. It wants to stay and prove something to the people who wronged you. The professional in you knows that none of those things serve your actual interests. Moving forward with intention is not the same as admitting defeat — it is the smarter play, full stop.
 
-## When They Apologise and Ask You to Stay
+## When They Apologize and Ask You to Stay
 
-Occasionally, the story takes an unexpected turn. The company realizes a mistake was made. They apologise. They offer to reinstate you. And suddenly you are facing a decision that feels like it should be simple — they admitted fault, they want you back, the situation is resolved — but is actually far more complicated than it appears.
+Occasionally, the story takes an unexpected turn. The company realizes a mistake was made. They apologize. They offer to reinstate you. And suddenly you are facing a decision that feels like it should be simple — they admitted fault, they want you back, the situation is resolved — but is actually far more complicated than it appears.
 
 Consider carefully what has already happened in the workplace while all of this was unfolding. Word travels fast in any casino environment. Your colleagues know something went wrong. The pit, the floor, the back office — people talk, and by the time an apology arrives, conclusions have already been formed. Even with the best intentions on both sides, the dynamic has shifted. The way people look at you, the assumptions they carry into interactions, the unspoken questions that linger in every shift — these things do not disappear because an official apology was issued. In most cases, the environment you would be returning to is simply not the same one you left.
 
@@ -45,9 +45,9 @@ Consider carefully what has already happened in the workplace while all of this 
 
 I want to share two situations that shaped how I think about this, because they illustrate the point more clearly than any abstract advice can.
 
-The first was my own. I was on the receiving end of a termination that the company later acknowledged was not handled correctly. They apologised and offered to have me back. I declined — not out of bitterness, but because I had looked at the situation honestly and understood that returning would not restore what had existed before. I moved on, found a better position, and I have never looked back with regret.
+The first was my own. I was on the receiving end of a termination that the company later acknowledged was not handled correctly. They apologized and offered to have me back. I declined — not out of bitterness, but because I had looked at the situation honestly and understood that returning would not restore what had existed before. I moved on, found a better position, and I have never looked back with regret.
 
-The second was harder to watch. A dealer I worked alongside was accused of stealing a €2,000 plaque and was immediately dismissed. It was a serious accusation — the kind that travels. Days later, the chip turned up in the cube where the floats were kept. The pit bosses had made an error. The company apologised formally and offered reinstatement. But by the time the truth emerged, the entire casino floor had already processed the story. People had formed their conclusions. The whispers had circulated. The apology was genuine, but the damage to his reputation within that workplace was already done, and no paperwork was going to undo it.
+The second was harder to watch. A dealer I worked alongside was accused of stealing a €2,000 plaque and was immediately dismissed. It was a serious accusation — the kind that travels. Days later, the chip turned up in the cube where the floats were kept. The pit bosses had made an error. The company apologized formally and offered reinstatement. But by the time the truth emerged, the entire casino floor had already processed the story. People had formed their conclusions. The whispers had circulated. The apology was genuine, but the damage to his reputation within that workplace was already done, and no paperwork was going to undo it.
 
 He chose not to return. It was the right decision. Watching that situation unfold cemented something I already suspected: staying to prove a point to people who have already made up their minds is not a battle worth fighting. The energy it costs, the toll it takes on your confidence and your daily mood, and the time it consumes are simply not worth it when that same effort could be building something better elsewhere.
 

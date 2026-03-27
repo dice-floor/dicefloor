@@ -10,19 +10,17 @@ podcast_episode: ""
 excerpt: "A thousand years of human ingenuity, compressed into 52 rectangles — and one card that could get you hanged."
 ---
 
-Pick up a deck of cards and you are holding something that has passed through more hands, crossed more borders, and outlasted more empires than almost any other object in human history. The standard 52-card deck sitting in a casino shoe looks unremarkable — a disposable consumable, replaced every few hours and discarded without ceremony. But the object itself, the idea of it, the specific structure of suits and numbers and face cards, carries a history that stretches back over a thousand years and touches virtually every major civilisation along the way.
+Pick up a deck of cards and you are holding something that has passed through more hands, crossed more borders, and outlasted more empires than almost any other object in human history. The standard 52-card deck sitting in a casino shoe looks unremarkable — a disposable consumable, replaced every few hours and discarded without ceremony. But the object itself, the idea of it, the specific structure of suits and numbers and face cards, carries a history that stretches back over a thousand years and touches virtually every major civilization along the way.
 
----
 
 ## Where It All Began
 
 The most widely accepted origin story places the invention of playing cards in Tang Dynasty China, somewhere around the ninth century. A text from 868 CE describes Princess Tongchang playing a "leaf game" with members of the imperial family, which is generally considered one of the earliest documented references to card-based play. The exact nature of those early cards was very different from what we recognize today — they were closer to paper tiles than to the structured deck we know — but the core idea of marked, portable game pieces was already there.
 
-From China, cards moved west along trade routes into Persia and then into the Arab world. Around the 11th century, playing cards were common in much of the Islamic world, where Persia and Arabia had cards that started to show similarities to the cards we have today — divided into groups of four suits, with numbered cards and court cards. The most significant surviving example of these early Islamic cards is the Mamluk deck, discovered in the Topkapı Palace in Istanbul. The Topkapı pack originally consisted of 52 cards comprising four suits: polo-sticks, coins, swords, and cups. Each suit contained ten pip cards and three court cards. The Mamluk court cards carried no human images, in keeping with Islamic artistic conventions, but the structural logic of the deck — four suits, numbered cards, court cards — is immediately recognisable as the ancestor of what sits in every casino shoe today.
+From China, cards moved west along trade routes into Persia and then into the Arab world. Around the 11th century, playing cards were common in much of the Islamic world, where Persia and Arabia had cards that started to show similarities to the cards we have today — divided into groups of four suits, with numbered cards and court cards. The most significant surviving example of these early Islamic cards is the Mamluk deck, discovered in the Topkapı Palace in Istanbul. The Topkapı pack originally consisted of 52 cards comprising four suits: polo-sticks, coins, swords, and cups. Each suit contained ten pip cards and three court cards. The Mamluk court cards carried no human images, in keeping with Islamic artistic conventions, but the structural logic of the deck — four suits, numbered cards, court cards — is immediately recognizable as the ancestor of what sits in every casino shoe today.
 
 From Persia, cards spread to Egypt during the era of the Mamluk Sultanate, and from there into Europe through both the Italian and Iberian peninsulas in the second half of the 14th century. The arrival of cards in Europe was sudden enough to be remarkable. Within a few decades of their first appearance, they had spread across the continent — and almost immediately, authorities began banning them. The bans are themselves evidence of how quickly cards caught on: you do not ban things that nobody is using.
 
----
 
 ## How Europe Made the Deck Its Own
 
@@ -32,7 +30,6 @@ The French suits won out largely because of practicality. They were simpler to p
 
 The court cards — King, Queen, and Jack — evolved from the Mamluk hierarchy of king, viceroy, and under-viceroy. The European versions gradually acquired the faces of specific historical and mythological figures, a tradition that lingered in French decks well into the modern era. The one-eyed King of Diamonds, the King of Hearts with a sword apparently entering his own head (earning him the nickname "the suicide king"), and the profile-facing Jacks of Spades and Hearts are all remnants of very specific artistic conventions that were established centuries ago and have simply been copied ever since without anyone particularly knowing why.
 
----
 
 ## The Ace of Spades and the Man Who Was Hanged for It
 
@@ -44,7 +41,6 @@ The consequence of forging this card was unambiguous. Forging a stamp on this ca
 
 A second case followed in 1836, when Henry Wheeler was found guilty of the same offence, though his sentence was reportedly commuted to transportation. The association between the Ace of Spades and death — which later surfaced again in the psychological warfare operations of the Vietnam War, when American soldiers left the card on fallen enemy combatants — has its roots not in mysticism but in this very specific and very lethal piece of British tax law.
 
----
 
 ## When Cards Entered the Casino
 
@@ -54,7 +50,6 @@ The earliest game still played in casinos today is baccarat, a version of which 
 
 Poker followed a parallel path, moving through saloons and riverboats before arriving in formal gambling establishments. The difference between poker cards and blackjack cards in a modern casino is largely one of use rather than design — both use the same standard 52-card French-suited deck, but casino blackjack cards are typically wider, dealt from a shoe, and replaced far more frequently due to the speed of play. The number of decks used in casino blackjack grew over time as a counter-measure against card counting: the six-deck game (312 cards) is the most popular in casinos today.
 
----
 
 ## What 52 Cards Might Actually Mean
 
@@ -66,6 +61,5 @@ What is not in doubt is that the standard deck is an extraordinarily versatile s
 
 Every deck that comes out of a new shoe at the start of a shift carries that history in its design, even if nobody at the table is thinking about Tang Dynasty princesses or a London cardmaker who went to the gallows in 1805. It is, in its quiet way, one of the more remarkable objects in the history of human entertainment — and it fits in the palm of your hand.
 
----
 
 *The next time you break open a fresh deck, take a second look at the Ace of Spades. There is a reason it looks different from every other card in the deck — and that reason got someone hanged.*

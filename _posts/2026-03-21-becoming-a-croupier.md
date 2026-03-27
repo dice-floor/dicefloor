@@ -27,7 +27,7 @@ One thing worth clarifying early: if you're training for a land casino outside t
 
 ## How the Course Unfolds
 
-At the beginning you'll receive the casino's procedures and the rhetoric rules for each game — the specific language and calls that dealers use during play. Some casinos also include Roulette shortcuts and Roulette maths, which you'll want to memorise if you want to make your working life easier.
+At the beginning you'll receive the casino's procedures and the rhetoric rules for each game — the specific language and calls that dealers use during play. Some casinos also include Roulette shortcuts and Roulette maths, which you'll want to memorize if you want to make your working life easier.
 
 During the first week, most courses focus on chip handling and card shuffling. Each casino has their own approach to both, so what you learn here may differ slightly from what you'd find elsewhere — that's normal, and it will make sense later if you ever move to a different property.
 
@@ -39,7 +39,7 @@ The dealers who progress fastest are almost always the ones who practice at home
 
 Pick up a few decks of cards from a local card dealer — they typically cost $5–$10. practice shuffling whenever you feel like it. Most casinos are trying to switch to automatic shuffling machines, but they break, and when the machine breaks, you'll need to shuffle manually. You don't want to be the dealer who can't do it properly.
 
-Get a cheap four-deck Blackjack shoe from AliExpress for around $5–$15, along with a set of cutting cards. Cut the cards in half when placing them in the shoe so you're practising both dealing and shuffling regularly.
+Get a cheap four-deck Blackjack shoe from AliExpress for around $5–$15, along with a set of cutting cards. Cut the cards in half when placing them in the shoe so you're practicing both dealing and shuffling regularly.
 
 For Roulette, find the actual layout dimensions, draw all the numbers on a large cardboard sheet, and use a small object as a dolly — the small marker dealers place on the winning number. Cover the cardboard with a thick cloth, then practice placing the dolly on specific numbers and checking your accuracy. This exercise might seem pointless at first. But in a very busy Roulette game, you may not be able to see the numbers at all because every position is covered with chips. When that happens, you'll be glad you did it.
 

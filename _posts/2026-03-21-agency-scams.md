@@ -81,7 +81,7 @@ What's really happening: the agent has told your employer you've decided not to 
 
 **Verify official relationships**
 - Check the employer's website — major cruise lines and casino corporations list their official recruitment partners
-- Contact the casino or cruise line's HR department directly and ask if the agent is authorised to recruit on their behalf
+- Contact the casino or cruise line's HR department directly and ask if the agent is authorized to recruit on their behalf
 - Request written confirmation of the agent-employer relationship
 
 **Document everything**

@@ -14,7 +14,6 @@ There is a version of casino management that treats the floor as a machine. Inpu
 
 The problem with that version is that the inputs are people. And people do not behave like components in a system. They respond to how they are treated. They perform better or worse depending on the environment around them. They notice when they are respected and when they are not, when their effort is seen and when it is invisible, when the person running the floor genuinely cares about the team and when they are simply going through the managerial motions. The technical skills of casino management are learnable and important. But the ability to work with people — to actually manage human beings rather than positions on a rota — is what separates the supervisors and managers who build strong floors from those who simply occupy them.
 
----
 
 ## You Are Working With People. Keep That in Mind.
 
@@ -24,17 +23,15 @@ When that shift happens, the first thing that goes is attentiveness. The manager
 
 The casino floor is a high-pressure, often late-night, physically demanding environment. The people working in it are not asking for special treatment. They are asking for basic human acknowledgment — that they exist as more than a warm body at a table, that their effort is visible, and that the person responsible for their working conditions is paying enough attention to know when things are going well and when they are not.
 
----
 
 ## The Line Between Friendly and Professional
 
-One of the more nuanced challenges of moving into a supervisory or management role — particularly when you have come up through the dealer ranks and know many of your team personally — is finding the right distance. Too distant, and you become a remote authority figure that the team neither trusts nor opens up to. Too close, and the professional structure starts to blur in ways that create real problems: favouritism, whether real or perceived, inconsistent standards, situations where a personal relationship makes it harder to have a necessary professional conversation.
+One of the more nuanced challenges of moving into a supervisory or management role — particularly when you have come up through the dealer ranks and know many of your team personally — is finding the right distance. Too distant, and you become a remote authority figure that the team neither trusts nor opens up to. Too close, and the professional structure starts to blur in ways that create real problems: favoritism, whether real or perceived, inconsistent standards, situations where a personal relationship makes it harder to have a necessary professional conversation.
 
 The line is not always easy to find, and it moves depending on the individual and the context. But the general principle is fairly stable: you can be warm, approachable, and genuinely interested in the people on your team without crossing into a friendship that compromises your ability to manage them. Friendliness is a style. Professionalism is a standard. They are not mutually exclusive, and the best managers hold both simultaneously without apparent effort — though that ease usually reflects years of deliberate practice rather than natural disposition.
 
 The test is simple: can you have a difficult conversation with this person without it damaging the relationship? Can you point out a mistake, enforce a standard, or make a decision they disagree with and have it land as professional rather than personal? If the answer is yes, you have found the right distance. If the answer is complicated by the social dynamic you have built, the balance has tipped too far.
 
----
 
 ## Feedback in Both Directions
 
@@ -46,7 +43,6 @@ But the other half of this is equally important and frequently neglected. When s
 
 The team is watching how recognition and correction are distributed. If corrections are public and recognition is private or absent, the environment starts to feel adversarial. If both are handled with equal care and genuine attention, the team starts to trust that the feedback they receive reflects what is actually happening rather than the manager's mood or agenda.
 
----
 
 ## Understanding the Ones Who Are Struggling
 
@@ -56,7 +52,6 @@ How a manager handles these individuals says a great deal about the quality of t
 
 This does not mean excusing persistent underperformance or carrying people who have no intention of improving. It means distinguishing between someone who is having a difficult stretch and someone who has stopped trying, and responding to each accordingly. That distinction requires attention and judgment, which brings us back to the same foundation: you are working with people, and people require more than procedural management.
 
----
 
 ## The Honest Part
 
@@ -68,6 +63,5 @@ Try not to be too quick to judge a new manager or supervisor. Give them time, wa
 
 The ones who are not trying — who have already decided that authority is a substitute for skill — tend to make themselves known without much help from your gut at all.
 
----
 
 *The best managers on any floor are the ones whose teams perform well not because they are afraid of disappointing them, but because they do not want to.*

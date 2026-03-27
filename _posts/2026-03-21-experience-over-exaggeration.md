@@ -9,7 +9,7 @@ podcast_episode: ""
 excerpt: "Inflating your CV in this industry doesn't just risk the job. It undermines every raise and promotion conversation you'll ever have with that employer."
 ---
 
-Job hunting in the casino industry comes with a particular kind of pressure. You want the role. You want the contract. You want to be taken seriously as a candidate, and the gap between where you are and where you want to be can feel uncomfortably wide when you're staring at a job listing with requirements that stretch slightly beyond your current experience. The temptation to close that gap on paper — to round up the years, to add games you've touched but never properly mastered, to present yourself as more polished than you currently are — is something most dealers will recognise at some point in their career.
+Job hunting in the casino industry comes with a particular kind of pressure. You want the role. You want the contract. You want to be taken seriously as a candidate, and the gap between where you are and where you want to be can feel uncomfortably wide when you're staring at a job listing with requirements that stretch slightly beyond your current experience. The temptation to close that gap on paper — to round up the years, to add games you've touched but never properly mastered, to present yourself as more polished than you currently are — is something most dealers will recognize at some point in their career.
 
 Resist it. Not just because it's dishonest, though it is. But because in this industry specifically, it doesn't work — and the consequences of being found out are disproportionately large compared to whatever short-term advantage you might imagine it buys you.
 
