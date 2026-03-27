@@ -4,7 +4,7 @@ title: "Working for Carnival Casinos: What You Actually Need to Know Before You 
 date: 2026-03-26
 category: Cruise Lines
 author: Staff Writer
-image: https://picsum.photos/seed/carnival1/800/500
+image: "/assets/images/working-for-carnival-casinos.png"
 audio: ""
 podcast_episode: ""
 excerpt: "Carnival Corporation is bigger than most people realize, and working for their casino operation offers more variety, more stability, and more long-term upside than the surface-level picture suggests."

@@ -3,7 +3,7 @@ layout: article
 title: "Your Contract Was Terminated. Now What?"
 category: Casinos, Cruise Lines
 author: Staff Writer
-image: "https://picsum.photos/seed/cruise1/900/600"
+image: "/assets/images/contract-terminated.png"
 audio: ""
 podcast_episode: ""
 excerpt: "A practical guide to protecting your career, your reputation, and your peace of mind when the rug gets pulled."

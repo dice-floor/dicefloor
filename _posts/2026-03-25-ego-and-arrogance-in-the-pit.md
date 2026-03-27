@@ -4,7 +4,7 @@ title: "Ego and Arrogance in the Pit"
 date: 2026-03-25
 category: Casinos
 author: Staff Writer
-image: "https://picsum.photos/seed/cruise1/900/600"
+image: "/assets/images/ego-and-arrogance-in-the-pit.png"
 audio: ""
 podcast_episode: ""
 excerpt: "Why some supervisors struggle, how to spot the difference between incompetence and arrogance, and what it costs everyone when the wrong person is running the floor."

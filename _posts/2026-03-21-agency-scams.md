@@ -3,7 +3,7 @@ layout: article
 title: "Casino Job Agency Scams: How to Protect Yourself and Your Money"
 category: Casinos, Cruise Lines
 author: Staff Writer
-image: "https://picsum.photos/seed/cruise1/900/600"
+image: "/assets/images/agency-scams.png"
 audio: ""
 podcast_episode: ""
 excerpt: "Before you invest your savings in a 'guaranteed' job offer, read this. Casino recruitment scams are sophisticated, widespread — and entirely preventable if you know what to look for."
