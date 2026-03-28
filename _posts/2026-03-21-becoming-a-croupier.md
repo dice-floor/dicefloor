@@ -3,7 +3,7 @@ layout: article
 title: "Becoming a Croupier: What the First Steps Actually Look Like"
 category: Casinos, Cruise Lines
 author: Staff Writer
-image: "https://picsum.photos/seed/cruise1/900/600"
+image: "/assets/images/becoming-croupier.png"
 audio: ""
 podcast_episode: ""
 excerpt: "You don't need special skills to become a dealer. You need practice, the right tools, and the patience to let experience do the rest."
