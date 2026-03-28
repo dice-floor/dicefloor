@@ -14,7 +14,7 @@ layout: default
     {% if hero %}
     <div class="row-hero">
         <div class="hero-main">
-            <span class="tag">{{ hero.category }}</span>
+            <span class="tag">{{ hero.category | split: "," | first | strip }}</span>
             <a href="{{ hero.url | relative_url }}">
                 <img class="hero-top-img" src="{{ hero.image }}" alt="{{ hero.title }}" loading="lazy">
                 <h2 class="article-headline">{{ hero.title }}</h2>
@@ -29,7 +29,6 @@ layout: default
         </div>
 
         <div class="hero-side">
-            <span class="tag">Listen</span>
             {% for post in posts limit:5 %}
             <div class="audio-card">
                 <div class="audio-thumb-wrap">
@@ -46,24 +45,24 @@ layout: default
                 </div>
             </div>
             {% endfor %}
+            <a href="{{ '/listen/' | relative_url }}" class="listen-more-link">Listen to more audio articles &rarr;</a>
         </div>
     </div>
     {% endif %}
 
-    <!-- ROW 2 — THREE COLUMNS -->
-    {% assign row2 = posts | slice: 1, 3 %}
+    <!-- ROW 2 — FOUR COLUMNS -->
+    {% assign row2 = posts | slice: 1, 4 %}
     {% if row2.size > 0 %}
-    <div class="row-three">
+    <div class="row-four-cols">
         {% for post in row2 %}
         <article>
-            <span class="tag">{{ post.category }}</span>
             <a href="{{ post.url | relative_url }}">
                 <img class="article-img" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
                 <h3 class="article-headline">{{ post.title }}</h3>
             </a>
             <p class="article-dek">{{ post.excerpt }}</p>
             <div class="article-footer">
-                <span class="article-meta">{{ post.date | date: "%B %Y" }}</span>
+                <span class="article-meta"><span class="article-category">{{ post.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}</span>
                 <button class="speaker-btn" aria-label="Listen to article">
                     <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
                 </button>
@@ -73,36 +72,129 @@ layout: default
     </div>
     {% endif %}
 
-    <!-- ROW 3 — WIDE + STACK -->
-    {% assign row3_main = posts[4] %}
-    {% assign row3_stack = posts | slice: 5, 5 %}
-    {% if row3_main %}
-    <div class="row-wide-stack">
-        <div class="main">
-            <span class="tag">{{ row3_main.category }}</span>
-            <a href="{{ row3_main.url | relative_url }}">
-                <img class="article-img" src="{{ row3_main.image }}" alt="{{ row3_main.title }}" loading="lazy">
-                <h2 class="article-headline">{{ row3_main.title }}</h2>
-            </a>
-            <p class="article-dek">{{ row3_main.excerpt }}</p>
-            <div class="article-footer">
-                <span class="article-meta">{% if row3_main.author %}By {{ row3_main.author }} &nbsp;·&nbsp; {% endif %}{{ row3_main.date | date: "%B %Y" }}</span>
-                <button class="speaker-btn" aria-label="Listen to article">
-                    <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-                </button>
-            </div>
-        </div>
-        {% if row3_stack.size > 0 %}
-        <div class="stack">
-            {% for post in row3_stack %}
-            <div class="stack-item">
-                <span class="tag">{{ post.category }}</span>
-                <h3 class="article-headline"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <!-- ROW 3 — THREE COLUMNS (narrow | wide | narrow) -->
+    {% assign r3_left_top   = posts[5] %}
+    {% assign r3_left_stack = posts | slice: 6, 3 %}
+    {% assign r3_mid        = posts[9] %}
+    {% assign r3_right_top  = posts[10] %}
+    {% assign r3_right_stack = posts | slice: 11, 3 %}
+    {% if r3_left_top or r3_mid %}
+    <div class="row-3col">
+
+        <!-- Left narrow column -->
+        <div class="r3-side r3-side--left">
+            {% if r3_left_top %}
+            <article class="r3-lead">
+                <a href="{{ r3_left_top.url | relative_url }}">
+                    <img class="article-img" src="{{ r3_left_top.image }}" alt="{{ r3_left_top.title }}" loading="lazy">
+                    <h3 class="article-headline">{{ r3_left_top.title }}</h3>
+                </a>
                 <div class="article-footer">
-                    <span class="article-meta">{{ post.date | date: "%B %Y" }}</span>
-                    <button class="speaker-btn" aria-label="Listen to article">
-                        <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-                    </button>
+                    <span class="article-meta"><span class="article-category">{{ r3_left_top.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ r3_left_top.date | date: "%B %Y" }}</span>
+                    <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+                </div>
+            </article>
+            {% endif %}
+            {% for post in r3_left_stack %}
+            <div class="r3-stack-item">
+                <h4 class="article-headline"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+                <div class="article-footer">
+                    <span class="article-meta"><span class="article-category">{{ post.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}{% if post.author %}&nbsp;·&nbsp;{{ post.author }}{% endif %}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Middle wide column -->
+        <div class="r3-main">
+            {% if r3_mid %}
+            <article>
+                <a href="{{ r3_mid.url | relative_url }}">
+                    <img class="article-img" src="{{ r3_mid.image }}" alt="{{ r3_mid.title }}" loading="lazy">
+                    <h2 class="article-headline">{{ r3_mid.title }}</h2>
+                </a>
+                <p class="article-dek">{{ r3_mid.excerpt }}</p>
+                <div class="article-footer">
+                    <span class="article-meta"><span class="article-category">{{ r3_mid.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{% if r3_mid.author %}{{ r3_mid.author }}&nbsp;·&nbsp;{% endif %}{{ r3_mid.date | date: "%B %Y" }}</span>
+                    <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+                </div>
+            </article>
+            {% endif %}
+        </div>
+
+        <!-- Right narrow column -->
+        <div class="r3-side r3-side--right">
+            {% if r3_right_top %}
+            <article class="r3-lead">
+                <a href="{{ r3_right_top.url | relative_url }}">
+                    <img class="article-img" src="{{ r3_right_top.image }}" alt="{{ r3_right_top.title }}" loading="lazy">
+                    <h3 class="article-headline">{{ r3_right_top.title }}</h3>
+                </a>
+                <div class="article-footer">
+                    <span class="article-meta"><span class="article-category">{{ r3_right_top.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ r3_right_top.date | date: "%B %Y" }}</span>
+                    <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+                </div>
+            </article>
+            {% endif %}
+            {% for post in r3_right_stack %}
+            <div class="r3-stack-item">
+                <h4 class="article-headline"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+                <div class="article-footer">
+                    <span class="article-meta"><span class="article-category">{{ post.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}{% if post.author %}&nbsp;·&nbsp;{{ post.author }}{% endif %}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+    {% endif %}
+
+    <!-- ROW 4 — TWO COLUMNS WITH STACKS (image top + 2 titles each) -->
+    {% assign r4_left_top    = posts[14] %}
+    {% assign r4_left_stack  = posts | slice: 15, 2 %}
+    {% assign r4_right_top   = posts[17] %}
+    {% assign r4_right_stack = posts | slice: 18, 2 %}
+    {% if r4_left_top or r4_right_top %}
+    <div class="row-2stack">
+        {% if r4_left_top %}
+        <div class="r4-col">
+            <article class="r4-lead">
+                <a href="{{ r4_left_top.url | relative_url }}">
+                    <img class="article-img" src="{{ r4_left_top.image }}" alt="{{ r4_left_top.title }}" loading="lazy">
+                    <h3 class="article-headline">{{ r4_left_top.title }}</h3>
+                </a>
+                <div class="article-footer">
+                    <span class="article-meta"><span class="article-category">{{ r4_left_top.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ r4_left_top.date | date: "%B %Y" }}</span>
+                    <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+                </div>
+            </article>
+            {% for post in r4_left_stack %}
+            <div class="r4-stack-item">
+                <h4 class="article-headline"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+                <div class="article-footer">
+                    <span class="article-meta"><span class="article-category">{{ post.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}{% if post.author %}&nbsp;·&nbsp;{{ post.author }}{% endif %}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% if r4_right_top %}
+        <div class="r4-col">
+            <article class="r4-lead">
+                <a href="{{ r4_right_top.url | relative_url }}">
+                    <img class="article-img" src="{{ r4_right_top.image }}" alt="{{ r4_right_top.title }}" loading="lazy">
+                    <h3 class="article-headline">{{ r4_right_top.title }}</h3>
+                </a>
+                <div class="article-footer">
+                    <span class="article-meta"><span class="article-category">{{ r4_right_top.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ r4_right_top.date | date: "%B %Y" }}</span>
+                    <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+                </div>
+            </article>
+            {% for post in r4_right_stack %}
+            <div class="r4-stack-item">
+                <h4 class="article-headline"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+                <div class="article-footer">
+                    <span class="article-meta"><span class="article-category">{{ post.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}{% if post.author %}&nbsp;·&nbsp;{{ post.author }}{% endif %}</span>
                 </div>
             </div>
             {% endfor %}
@@ -111,45 +203,20 @@ layout: default
     </div>
     {% endif %}
 
-    <!-- ROW 4 — FOUR COLUMNS -->
-    {% assign row4 = posts | slice: 10, 4 %}
-    {% if row4.size > 0 %}
-    <div class="row-four">
-        {% for post in row4 %}
+    <!-- ROW 5 — THREE COLUMNS -->
+    {% assign row5 = posts | slice: 20, 3 %}
+    {% if row5.size > 0 %}
+    <div class="row-3simple">
+        {% for post in row5 %}
         <article>
-            <span class="tag">{{ post.category }}</span>
             <a href="{{ post.url | relative_url }}">
                 <img class="article-img" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
                 <h3 class="article-headline">{{ post.title }}</h3>
             </a>
-            <div class="article-footer">
-                <span class="article-meta">{{ post.date | date: "%B %Y" }}</span>
-                <button class="speaker-btn" aria-label="Listen to article">
-                    <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-                </button>
-            </div>
-        </article>
-        {% endfor %}
-    </div>
-    {% endif %}
-
-    <!-- ROW 5 — TWO COLUMNS -->
-    {% assign row5 = posts | slice: 14, 2 %}
-    {% if row5.size > 0 %}
-    <div class="row-two">
-        {% for post in row5 %}
-        <article>
-            <span class="tag">{{ post.category }}</span>
-            <a href="{{ post.url | relative_url }}">
-                <img class="article-img" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
-                <h2 class="article-headline">{{ post.title }}</h2>
-            </a>
             <p class="article-dek">{{ post.excerpt }}</p>
             <div class="article-footer">
-                <span class="article-meta">{% if post.author %}By {{ post.author }} &nbsp;·&nbsp; {% endif %}{{ post.date | date: "%B %Y" }}</span>
-                <button class="speaker-btn" aria-label="Listen to article">
-                    <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-                </button>
+                <span class="article-meta"><span class="article-category">{{ post.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}</span>
+                <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
             </div>
         </article>
         {% endfor %}
@@ -164,20 +231,18 @@ layout: default
     {% assign mob1 = posts[0] %}
     {% if mob1 %}
     <div class="mobile-article">
-        <span class="tag">{{ mob1.category }}</span>
         <a href="{{ mob1.url | relative_url }}">
             <img class="article-img" src="{{ mob1.image }}" alt="{{ mob1.title }}" loading="lazy">
             <h2 class="article-headline">{{ mob1.title }}</h2>
         </a>
         <div class="article-footer">
-            <span class="article-meta">{{ mob1.date | date: "%B %Y" }}</span>
+            <span class="article-meta"><span class="article-category">{{ mob1.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ mob1.date | date: "%B %Y" }}</span>
             <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
         </div>
     </div>
     {% endif %}
 
     <div class="mobile-audio-row">
-        <span class="tag">Listen</span>
         <div class="mobile-audio-grid">
             {% for post in posts limit:3 %}
             <div class="mobile-audio-item">
@@ -194,21 +259,25 @@ layout: default
             </div>
             {% endfor %}
         </div>
+        <a href="{{ '/listen/' | relative_url }}" class="mobile-listen-more">Listen to more audio articles &rarr;</a>
     </div>
 
-    {% assign mob_articles = posts | slice: 1, 3 %}
+    {% assign mob_articles = posts | slice: 1, 5 %}
     {% for post in mob_articles %}
     <div class="mobile-article">
-        <span class="tag">{{ post.category }}</span>
         <a href="{{ post.url | relative_url }}">
             <img class="article-img" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
             <h2 class="article-headline">{{ post.title }}</h2>
         </a>
         <div class="article-footer">
-            <span class="article-meta">{{ post.date | date: "%B %Y" }}</span>
+            <span class="article-meta"><span class="article-category">{{ post.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}</span>
             <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
         </div>
     </div>
     {% endfor %}
+
+    <div class="mobile-read-more-row">
+        <a href="{{ '/articles/' | relative_url }}" class="mobile-read-more">Read more articles &rarr;</a>
+    </div>
 
 </div><!-- /mobile content -->
