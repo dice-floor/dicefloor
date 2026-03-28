@@ -4,7 +4,7 @@ title: "Stressed Dealers Lose Money. And Often Intentionally if You Push Them To
 date: 2026-03-25
 category: Casinos
 author: Staff Writer
-image: "/assets/images/stressed-dealers-lose-money.png"
+image: "/assets/images/stressed-dealers-loose-money.png"
 audio: ""
 podcast_episode: ""
 excerpt: "Why dealer wellbeing is not a soft issue — it is a revenue issue — and what happens when management forgets that."
