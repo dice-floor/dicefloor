@@ -14,17 +14,16 @@ layout: default
     {% if hero %}
     <div class="row-hero">
         <div class="hero-main">
-            <span class="tag">{{ hero.category | split: "," | first | strip }}</span>
             <a href="{{ hero.url | relative_url }}">
                 <img class="hero-top-img" src="{{ hero.image }}" alt="{{ hero.title }}" loading="lazy">
                 <h2 class="article-headline">{{ hero.title }}</h2>
             </a>
             <p class="article-dek">{{ hero.excerpt }}</p>
             <div class="article-footer">
-                <span class="article-meta">{% if hero.author %}By {{ hero.author }} &nbsp;·&nbsp; {% endif %}{{ hero.date | date: "%B %Y" }}</span>
-                <button class="speaker-btn" aria-label="Listen to article">
+                <span class="article-meta"><span class="article-category">{{ hero.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{% if hero.author %}{{ hero.author }}&nbsp;·&nbsp;{% endif %}{{ hero.date | date: "%B %Y" }}</span>
+                <a class="speaker-btn" href="{{ hero.url | relative_url }}" aria-label="Listen to article">
                     <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-                </button>
+                </a>
             </div>
         </div>
 
@@ -63,9 +62,9 @@ layout: default
             <p class="article-dek">{{ post.excerpt }}</p>
             <div class="article-footer">
                 <span class="article-meta"><span class="article-category">{{ post.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}</span>
-                <button class="speaker-btn" aria-label="Listen to article">
+                <a class="speaker-btn" href="{{ post.url | relative_url }}" aria-label="Listen to article">
                     <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-                </button>
+                </a>
             </div>
         </article>
         {% endfor %}
@@ -91,7 +90,7 @@ layout: default
                 </a>
                 <div class="article-footer">
                     <span class="article-meta"><span class="article-category">{{ r3_left_top.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ r3_left_top.date | date: "%B %Y" }}</span>
-                    <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+                    <a class="speaker-btn" href="{{ r3_left_top.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
                 </div>
             </article>
             {% endif %}
@@ -100,6 +99,7 @@ layout: default
                 <h4 class="article-headline"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
                 <div class="article-footer">
                     <span class="article-meta"><span class="article-category">{{ post.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}{% if post.author %}&nbsp;·&nbsp;{{ post.author }}{% endif %}</span>
+                    <a class="speaker-btn" href="{{ post.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
                 </div>
             </div>
             {% endfor %}
@@ -116,7 +116,7 @@ layout: default
                 <p class="article-dek">{{ r3_mid.excerpt }}</p>
                 <div class="article-footer">
                     <span class="article-meta"><span class="article-category">{{ r3_mid.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{% if r3_mid.author %}{{ r3_mid.author }}&nbsp;·&nbsp;{% endif %}{{ r3_mid.date | date: "%B %Y" }}</span>
-                    <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+                    <a class="speaker-btn" href="{{ r3_mid.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
                 </div>
             </article>
             {% endif %}
@@ -132,7 +132,7 @@ layout: default
                 </a>
                 <div class="article-footer">
                     <span class="article-meta"><span class="article-category">{{ r3_right_top.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ r3_right_top.date | date: "%B %Y" }}</span>
-                    <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+                    <a class="speaker-btn" href="{{ r3_right_top.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
                 </div>
             </article>
             {% endif %}
@@ -141,6 +141,7 @@ layout: default
                 <h4 class="article-headline"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
                 <div class="article-footer">
                     <span class="article-meta"><span class="article-category">{{ post.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}{% if post.author %}&nbsp;·&nbsp;{{ post.author }}{% endif %}</span>
+                    <a class="speaker-btn" href="{{ post.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
                 </div>
             </div>
             {% endfor %}
@@ -165,7 +166,7 @@ layout: default
                 </a>
                 <div class="article-footer">
                     <span class="article-meta"><span class="article-category">{{ r4_left_top.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ r4_left_top.date | date: "%B %Y" }}</span>
-                    <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+                    <a class="speaker-btn" href="{{ r4_left_top.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
                 </div>
             </article>
             {% for post in r4_left_stack %}
@@ -173,6 +174,7 @@ layout: default
                 <h4 class="article-headline"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
                 <div class="article-footer">
                     <span class="article-meta"><span class="article-category">{{ post.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}{% if post.author %}&nbsp;·&nbsp;{{ post.author }}{% endif %}</span>
+                    <a class="speaker-btn" href="{{ post.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
                 </div>
             </div>
             {% endfor %}
@@ -187,7 +189,7 @@ layout: default
                 </a>
                 <div class="article-footer">
                     <span class="article-meta"><span class="article-category">{{ r4_right_top.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ r4_right_top.date | date: "%B %Y" }}</span>
-                    <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+                    <a class="speaker-btn" href="{{ r4_right_top.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
                 </div>
             </article>
             {% for post in r4_right_stack %}
@@ -195,6 +197,7 @@ layout: default
                 <h4 class="article-headline"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
                 <div class="article-footer">
                     <span class="article-meta"><span class="article-category">{{ post.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}{% if post.author %}&nbsp;·&nbsp;{{ post.author }}{% endif %}</span>
+                    <a class="speaker-btn" href="{{ post.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
                 </div>
             </div>
             {% endfor %}
@@ -216,7 +219,7 @@ layout: default
             <p class="article-dek">{{ post.excerpt }}</p>
             <div class="article-footer">
                 <span class="article-meta"><span class="article-category">{{ post.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}</span>
-                <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+                <a class="speaker-btn" href="{{ post.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
             </div>
         </article>
         {% endfor %}
@@ -237,7 +240,7 @@ layout: default
         </a>
         <div class="article-footer">
             <span class="article-meta"><span class="article-category">{{ mob1.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ mob1.date | date: "%B %Y" }}</span>
-            <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+            <a class="speaker-btn" href="{{ mob1.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
         </div>
     </div>
     {% endif %}
@@ -271,7 +274,7 @@ layout: default
         </a>
         <div class="article-footer">
             <span class="article-meta"><span class="article-category">{{ post.category | split: "," | first | strip }}</span>&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}</span>
-            <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+            <a class="speaker-btn" href="{{ post.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
         </div>
     </div>
     {% endfor %}
