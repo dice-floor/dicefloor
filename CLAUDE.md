@@ -39,6 +39,14 @@ The site is a Jekyll static site hosted on GitHub Pages at https://github.com/di
 - Do not add links to external websites without discussing first.
 - Do not add new nav menu items without discussing first — the menu is intentionally minimal.
 
+## Article Categories — PENDING AUDIT
+The 4 confirmed categories are: **Cruise Lines**, **Casinos**, **Job Hunting**, **Career Skills**.
+More categories will be added by the user once finalized. When the full list is confirmed, do a front matter audit across all `_posts/` to assign each article to exactly one correct category.
+
+Current state: most posts have incorrect or catch-all categories (e.g. `Casinos, Cruise Lines`). Do not audit until the user provides the complete category list.
+
+Category pages live at `/categories/{slug}/` — add a new folder + `index.html` with `layout: category` and `category_name` front matter for each new category.
+
 ## What's In Progress
 - More articles being written and added to `_posts/`
 - Cruise lines page (ocean + river cruise lines) — data being compiled manually
