@@ -5,9 +5,10 @@ title: Articles
 <div class="content">
     <div class="articles-row">
 
-        {% assign categories = "Cruise Lines,Casinos,Jobs" | split: "," %}
+        {% assign categories = "Cruise Lines,Casinos,Job Hunting,Career Skills" | split: "," %}
         {% for cat in categories %}
             {% assign cat_posts = site.posts | where_exp: "post", "post.category contains cat" %}
+            {% assign cat_slug = cat | downcase | replace: " ", "-" %}
             <div class="articles-col{% if forloop.first %} articles-col--first{% endif %}{% if forloop.last %} articles-col--last{% endif %}">
 
                 <div class="articles-col-header">
@@ -19,36 +20,32 @@ title: Articles
                 {% if lead %}
                 <div class="articles-col-lead">
                     <a href="{{ lead.url | relative_url }}" class="articles-col-img-link">
-                        <img src="{{ lead.image }}" alt="{{ lead.title }}" class="articles-col-img">
+                        <img src="{{ lead.image }}" alt="{{ lead.title }}" class="articles-col-img" loading="lazy">
                     </a>
                     <h3 class="articles-col-lead-title">
                         <a href="{{ lead.url | relative_url }}">{{ lead.title }}</a>
                     </h3>
                     <div class="articles-col-footer">
-                        {% assign words = lead.content | number_of_words %}
-                        {% assign read_time = words | divided_by: 200 %}
-                        {% if read_time < 1 %}{% assign read_time = 1 %}{% endif %}
-                        <span class="articles-col-meta">{{ lead.date | date: "%b %-d, %Y" }}&nbsp;·&nbsp;{{ read_time }} min read</span>
-                        <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+                        <span class="articles-col-meta">{{ lead.date | date: "%b %-d, %Y" }}</span>
+                        <a class="speaker-btn" href="{{ lead.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
                     </div>
                 </div>
                 {% endif %}
 
-                {% assign rest = cat_posts | slice: 1, 20 %}
+                {% assign rest = cat_posts | slice: 1, 4 %}
                 {% for post in rest %}
                 <div class="articles-col-item">
                     <h4 class="articles-col-item-title">
                         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                     </h4>
                     <div class="articles-col-footer">
-                        {% assign words = post.content | number_of_words %}
-                        {% assign read_time = words | divided_by: 200 %}
-                        {% if read_time < 1 %}{% assign read_time = 1 %}{% endif %}
-                        <span class="articles-col-meta">{{ post.date | date: "%b %-d, %Y" }}&nbsp;·&nbsp;{{ read_time }} min read</span>
-                        <button class="speaker-btn" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></button>
+                        <span class="articles-col-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                        <a class="speaker-btn" href="{{ post.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
                     </div>
                 </div>
                 {% endfor %}
+
+                <a href="/categories/{{ cat_slug }}/" class="articles-col-read-more">Read more from {{ cat }} &rarr;</a>
 
             </div>
         {% endfor %}

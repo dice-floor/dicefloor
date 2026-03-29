@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<div class="content">
+    <div class="category-page">
+
+        <div class="category-header">
+            <h1 class="category-title">{{ page.category_name }}</h1>
+            <hr class="category-rule">
+        </div>
+
+        {% assign cat_posts = site.posts | where_exp: "post", "post.category contains page.category_name" %}
+
+        <div class="cat-grid">
+            {% for post in cat_posts %}
+            <article class="cat-card">
+                <a href="{{ post.url | relative_url }}" class="cat-card-img-link">
+                    <img src="{{ post.image }}" alt="{{ post.title }}" class="cat-card-img" loading="lazy">
+                </a>
+                <h3 class="cat-card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                <p class="cat-card-excerpt">{{ post.excerpt | strip_html }}</p>
+                <div class="cat-card-footer">
+                    <span class="cat-card-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %}&nbsp;·&nbsp;{{ post.author }}{% endif %}</span>
+                    <a class="speaker-btn" href="{{ post.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
