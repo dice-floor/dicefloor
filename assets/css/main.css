@@ -96,8 +96,8 @@ a:hover { color: var(--accent); }
     font-weight: 400; color: var(--black); line-height: 1.2; margin-bottom: 8px;
 }
 .article-dek {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 15px; font-weight: 350; color: var(--mid);
+    font-family: 'AGaramondPro', 'Adobe Garamond Pro', garamond, Times, serif;
+    font-size: 18px; font-weight: 400; color: #222222;
     line-height: 1.55; margin-bottom: 10px;
 }
 .article-footer {
@@ -126,7 +126,7 @@ a:hover { color: var(--accent); }
     object-fit: cover; background: #e8e8e8; margin-bottom: 14px;
 }
 .hero-main .article-headline { font-size: 34px; letter-spacing: -0.02em; }
-.hero-main .article-dek { font-size: 15px; }
+.hero-main .article-dek { font-size: 19px; }
 .hero-side {
     display: flex; flex-direction: column; gap: 0;
     padding-left: 40px; border-left: 1px solid var(--rule);
@@ -765,7 +765,7 @@ footer {
     gap: 28px; padding: 28px 0 32px; border-bottom: 1px solid var(--rule);
 }
 .row-four-cols .article-headline { font-size: 20px; }
-.row-four-cols .article-dek { font-size: 14px; }
+.row-four-cols .article-dek { font-size: 16px; }
 
 /* ─── ROW 3 — THREE COLUMNS (1fr 2fr 1fr) ────────────────────── */
 .row-3col {
