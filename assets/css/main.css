@@ -739,6 +739,8 @@ footer {
         text-transform: uppercase; color: var(--mid); transition: color 0.15s;
     }
     .mobile-listen-more:hover { color: var(--accent); }
+    .mobile-cat-section { padding-top: 24px; border-top: 1px solid var(--rule); }
+    .mobile-cat-header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
     .mobile-read-more-row { padding: 16px 0; border-bottom: 1px solid var(--rule); }
     .mobile-read-more {
         font-family: 'Source Sans 3', sans-serif;
@@ -764,6 +766,15 @@ footer {
     text-transform: uppercase; color: var(--mid); transition: color 0.15s;
 }
 .listen-more-link:hover { color: var(--accent); }
+
+/* ─── HOMEPAGE CATEGORY SECTIONS ─────────────────────────────── */
+.homepage-cat-section {
+    padding-top: 32px; border-top: 1px solid var(--rule);
+}
+.homepage-cat-header {
+    display: flex; align-items: center; gap: 14px; margin-bottom: 4px;
+}
+.homepage-cat-section .row-four-cols { padding-top: 16px; }
 
 /* ─── ROW 2 — FOUR COLUMNS ────────────────────────────────────── */
 .row-four-cols {

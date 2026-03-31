@@ -2,7 +2,7 @@
 layout: article
 title: "The Casino Cash Desk: A Hidden Career Path Worth Knowing About"
 category: Casinos
-author: DiceFloor
+author: Staff Writer
 image: "/assets/images/cash-desk.png"
 audio: ""
 podcast_episode: ""
