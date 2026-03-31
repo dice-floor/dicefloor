@@ -39,13 +39,12 @@ The site is a Jekyll static site hosted on GitHub Pages at https://github.com/di
 - Do not add links to external websites without discussing first.
 - Do not add new nav menu items without discussing first — the menu is intentionally minimal.
 
-## Article Categories — PENDING AUDIT
-The 4 confirmed categories are: **Cruise Lines**, **Casinos**, **Job Hunting**, **Career Skills**.
-More categories will be added by the user once finalized. When the full list is confirmed, do a front matter audit across all `_posts/` to assign each article to exactly one correct category.
+## Article Categories
+The 6 confirmed categories (all articles use exactly one): **Cruise Lines**, **Casinos**, **Job Hunting**, **Career Skills**, **Travel**, **Ports**.
 
-Current state: most posts have incorrect or catch-all categories (e.g. `Casinos, Cruise Lines`). Do not audit until the user provides the complete category list.
+Category audit completed — all post front matter is correct.
 
-Category pages live at `/categories/{slug}/` — add a new folder + `index.html` with `layout: category` and `category_name` front matter for each new category.
+Category pages live at `/categories/{slug}/`. To add a new category: create a folder + `index.html` with `layout: category` and `category_name` front matter, then add it to the list in `articles/index.html`.
 
 ## What's In Progress
 - More articles being written and added to `_posts/`
@@ -63,7 +62,7 @@ Six tools planned under the Dice Floor brand:
 5. **Marine Crew Paperwork Verification** — design complete (`docs/plans/2026-03-20-marine-crew-verification-design.md`)
 6. **Dealer Rota / Swings** — planned; supervisor live tool, replaces Excel, integrates with Dealer Evaluation
 
-## Scraper Scripts (in `/Users/danielgermanov/Documents/projects/dice-floor/`)
+## Scraper Scripts (in `/Users/danielgermanov/Library/Mobile Documents/com~apple~CloudDocs/projects/dice-floor/`)
 - `casino_scraper.py` — Wikipedia casino scraper
 - `casinocity_scraper.py` — CasinoCity.com scraper (IP blocked, use with care)
 - `build_casino_db.py` — parses sitemap.xml into `casinos_sitemap.json`

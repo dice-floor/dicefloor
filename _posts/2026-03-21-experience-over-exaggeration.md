@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Experience Over-Exaggeration: Why It Always Backfires"
-category: Casinos, Cruise Lines
+category: Job Hunting
 author: Staff Writer
 image: "/assets/images/experience-over-exaggeration.png"
 audio: ""

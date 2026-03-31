@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Should I Follow the Procedures?"
-category: Casinos, Cruise Lines
+category: Career Skills
 author: Staff Writer
 image: "/assets/images/should-i-follow-procedures.png"
 audio: ""

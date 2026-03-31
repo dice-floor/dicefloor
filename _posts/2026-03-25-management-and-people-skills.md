@@ -2,7 +2,7 @@
 layout: article
 title: "Management and People Skills"
 date: 2026-03-25
-category: Casinos
+category: Career Skills
 author: Staff Writer
 image: "/assets/images/management-and-people-skills.png"
 audio: ""

@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Employer References: Why You Might Want to Think Twice"
-category: Casinos, Cruise Lines
+category: Job Hunting
 author: Staff Writer
 image: "/assets/images/employer-references.png"
 audio: ""

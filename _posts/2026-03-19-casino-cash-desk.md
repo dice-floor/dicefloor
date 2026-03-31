@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "The Casino Cash Desk: A Hidden Career Path Worth Knowing About"
-category: Casinos, Cruise Lines
+category: Casinos
 author: DiceFloor
 image: "/assets/images/cash-desk.png"
 audio: ""

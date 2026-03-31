@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "The Wash: How Dirty Money Cleans Up on the Gaming Floor"
-category: Casinos, Cruise Lines
+category: Casinos
 author: Staff Writer
 image: "/assets/images/money-wash.png"
 audio: ""

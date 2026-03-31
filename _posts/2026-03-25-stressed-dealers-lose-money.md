@@ -2,7 +2,7 @@
 layout: article
 title: "Stressed Dealers Lose Money. And Often Intentionally if You Push Them Too Far."
 date: 2026-03-25
-category: Casinos
+category: Career Skills
 author: Staff Writer
 image: "/assets/images/stressed-dealers-loose-money.png"
 audio: ""

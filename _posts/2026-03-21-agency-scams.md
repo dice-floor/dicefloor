@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Casino Job Agency Scams: How to Protect Yourself and Your Money"
-category: Casinos, Cruise Lines
+category: Job Hunting
 author: Staff Writer
 image: "/assets/images/agency-scams.png"
 audio: ""

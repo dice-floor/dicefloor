@@ -2,7 +2,7 @@
 layout: article
 title: "Ego and Arrogance in the Pit"
 date: 2026-03-25
-category: Casinos
+category: Career Skills
 author: Staff Writer
 image: "/assets/images/ego-and-arrogance-in-the-pit.png"
 audio: ""

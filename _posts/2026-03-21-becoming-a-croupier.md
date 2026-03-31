@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Becoming a Croupier: What the First Steps Actually Look Like"
-category: Casinos, Cruise Lines
+category: Job Hunting
 author: Staff Writer
 image: "/assets/images/become-croupier.png"
 audio: ""

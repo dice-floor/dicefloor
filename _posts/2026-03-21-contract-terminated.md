@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Your Contract Was Terminated. Now What?"
-category: Casinos, Cruise Lines
+category: Career Skills
 author: Staff Writer
 image: "/assets/images/contract-terminated.png"
 audio: ""
