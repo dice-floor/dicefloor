@@ -241,6 +241,16 @@ footer {
     font-size: 13px; color: var(--light); margin-bottom: 20px;
     display: flex; align-items: center; justify-content: space-between;
 }
+.font-size-controls { display: flex; align-items: center; gap: 5px; }
+.font-size-btn {
+    background: none; border: 1px solid var(--rule);
+    padding: 3px 7px; cursor: pointer; border-radius: 2px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px; font-weight: 500; color: var(--mid);
+    line-height: 1; transition: color 0.15s, border-color 0.15s;
+}
+.font-size-btn:hover { color: var(--black); border-color: var(--mid); }
+
 .article-share {
     display: flex; align-items: center; gap: 14px;
 }
