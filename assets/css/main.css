@@ -119,7 +119,7 @@ a:hover { color: var(--accent); }
 /* ─── ROW 1 — HERO ────────────────────────────────────────────── */
 .row-hero {
     display: grid; grid-template-columns: 1fr 320px;
-    gap: 40px; padding: 28px 0 32px; border-bottom: 1px solid var(--rule);
+    gap: 40px; padding: 28px 0 32px;
 }
 .hero-main .hero-top-img {
     display: block; width: 100%; aspect-ratio: 21 / 9;
