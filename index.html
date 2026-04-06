@@ -47,36 +47,210 @@ layout: default
     </div>
     {% endif %}
 
-    <!-- ROWS 2–7 — CATEGORY SECTIONS -->
-    {% assign hp_cats = "Casinos,Cruise Lines,Career Skills,Job Hunting,Travel,Ports" | split: "," %}
-    {% for cat in hp_cats %}
-        {% assign cat_posts = site.posts | where: "category", cat %}
-        {% if cat_posts.size > 0 %}
-        <div class="homepage-cat-section">
-            <div class="homepage-cat-header">
-                <span class="articles-section-label">{{ cat }}</span>
-                <hr class="articles-section-rule">
+    <!-- ROW 2 — CASINOS -->
+    {% assign casino_posts = site.posts | where: "category", "Casinos" %}
+    {% if casino_posts.size > 0 %}
+    {% assign c0 = casino_posts[0] %}
+    <div class="homepage-cat-section">
+        <div class="homepage-cat-header">
+            <span class="articles-section-label">Casinos</span>
+            <hr class="articles-section-rule">
+            <a href="{{ '/categories/casinos/' | relative_url }}" class="hp-see-all">All casino articles &rarr;</a>
+        </div>
+        <div class="casinos-grid">
+            <div class="casino-lead">
+                <a href="{{ c0.url | relative_url }}">
+                    <img class="article-img casino-lead-img" src="{{ c0.image }}" alt="{{ c0.title }}" loading="lazy">
+                    <h3 class="article-headline casino-lead-headline">{{ c0.title }}</h3>
+                </a>
+                <p class="article-dek casino-lead-dek">{{ c0.excerpt }}</p>
+                <div class="article-footer">
+                    <span class="article-meta">{{ c0.author }}&nbsp;·&nbsp;{{ c0.date | date: "%B %Y" }}</span>
+                    <a class="speaker-btn" href="{{ c0.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
+                </div>
             </div>
-            <div class="row-four-cols">
-                {% for post in cat_posts limit:4 %}
-                <article>
+            <div class="v-rule"></div>
+            <div class="casino-mid">
+                {% for post in casino_posts offset:1 limit:2 %}
+                <div class="casino-mid-item">
                     <a href="{{ post.url | relative_url }}">
-                        <img class="article-img" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
-                        <h3 class="article-headline">{{ post.title }}</h3>
+                        <img class="article-img casino-mid-img" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                        <h3 class="article-headline casino-mid-headline">{{ post.title }}</h3>
                     </a>
-                    <p class="article-dek">{{ post.excerpt }}</p>
                     <div class="article-footer">
                         <span class="article-meta">{{ post.author }}&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}</span>
-                        <a class="speaker-btn" href="{{ post.url | relative_url }}" aria-label="Listen">
-                            <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-                        </a>
+                        <a class="speaker-btn" href="{{ post.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
                     </div>
-                </article>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="v-rule"></div>
+            <div class="casino-text">
+                {% for post in casino_posts offset:3 limit:5 %}
+                <div class="casino-text-item">
+                    <a href="{{ post.url | relative_url }}">
+                        <h3 class="article-headline casino-text-headline">{{ post.title }}</h3>
+                    </a>
+                    <div class="article-footer">
+                        <span class="article-meta">{{ post.author }}&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}</span>
+                        <a class="speaker-btn" href="{{ post.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
+                    </div>
+                </div>
                 {% endfor %}
             </div>
         </div>
-        {% endif %}
-    {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- ROW 3 — CRUISE LINES -->
+    {% assign cruise_posts = site.posts | where: "category", "Cruise Lines" %}
+    {% if cruise_posts.size > 0 %}
+    <div class="cruise-band-wrap">
+        <div class="homepage-cat-header">
+            <span class="articles-section-label">Cruise Lines</span>
+            <hr class="articles-section-rule">
+            <a href="{{ '/categories/cruise-lines/' | relative_url }}" class="hp-see-all">All cruise articles &rarr;</a>
+        </div>
+        <div class="cruise-cards-grid">
+            {% for post in cruise_posts limit:4 %}
+            <article class="cruise-card-item">
+                <a href="{{ post.url | relative_url }}">
+                    <img class="article-img cruise-card-img" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                    <h3 class="article-headline cruise-card-headline">{{ post.title }}</h3>
+                </a>
+                <p class="article-dek cruise-card-dek">{{ post.excerpt }}</p>
+                <div class="article-footer">
+                    <span class="article-meta">{{ post.author }}&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}</span>
+                    <a class="speaker-btn" href="{{ post.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- ROW 4 — CAREER (Career Skills + Job Hunting) -->
+    {% assign career_posts = site.posts | where: "category", "Career Skills" %}
+    {% assign job_posts    = site.posts | where: "category", "Job Hunting" %}
+    {% if career_posts.size > 0 or job_posts.size > 0 %}
+    <div class="homepage-cat-section">
+        <div class="homepage-cat-header">
+            <span class="articles-section-label">Career</span>
+            <hr class="articles-section-rule">
+        </div>
+        <div class="careers-grid">
+            <div>
+                <div class="careers-sub-title">
+                    <span>Career Skills</span>
+                    <a href="{{ '/categories/career-skills/' | relative_url }}" class="hp-see-all">More &rarr;</a>
+                </div>
+                {% for post in career_posts limit:4 %}
+                <div class="career-item">
+                    <a href="{{ post.url | relative_url }}" class="career-item-img-link">
+                        <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                    </a>
+                    <div class="career-item-text">
+                        <a href="{{ post.url | relative_url }}"><h3 class="article-headline career-headline">{{ post.title }}</h3></a>
+                        <div class="article-footer">
+                            <span class="article-meta">{{ post.author }}&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}</span>
+                            <a class="speaker-btn" href="{{ post.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div>
+                <div class="careers-sub-title">
+                    <span>Job Hunting</span>
+                    <a href="{{ '/categories/job-hunting/' | relative_url }}" class="hp-see-all">More &rarr;</a>
+                </div>
+                {% for post in job_posts limit:4 %}
+                <div class="career-item">
+                    <a href="{{ post.url | relative_url }}" class="career-item-img-link">
+                        <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                    </a>
+                    <div class="career-item-text">
+                        <a href="{{ post.url | relative_url }}"><h3 class="article-headline career-headline">{{ post.title }}</h3></a>
+                        <div class="article-footer">
+                            <span class="article-meta">{{ post.author }}&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}</span>
+                            <a class="speaker-btn" href="{{ post.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- ROW 5 — TRAVEL -->
+    {% assign travel_posts = site.posts | where: "category", "Travel" %}
+    {% if travel_posts.size > 0 %}
+    {% assign t0 = travel_posts[0] %}
+    <div class="homepage-cat-section">
+        <div class="homepage-cat-header">
+            <span class="articles-section-label">Travel</span>
+            <hr class="articles-section-rule">
+            <a href="{{ '/categories/travel/' | relative_url }}" class="hp-see-all">All travel articles &rarr;</a>
+        </div>
+        <div class="travel-grid">
+            <div class="travel-lead">
+                <a href="{{ t0.url | relative_url }}">
+                    <img class="article-img travel-lead-img" src="{{ t0.image }}" alt="{{ t0.title }}" loading="lazy">
+                    <h3 class="article-headline travel-lead-headline">{{ t0.title }}</h3>
+                </a>
+                <p class="article-dek">{{ t0.excerpt }}</p>
+                <div class="article-footer">
+                    <span class="article-meta">{{ t0.author }}&nbsp;·&nbsp;{{ t0.date | date: "%B %Y" }}</span>
+                    <a class="speaker-btn" href="{{ t0.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
+                </div>
+            </div>
+            <div class="travel-right">
+                {% for post in travel_posts offset:1 limit:3 %}
+                <div class="travel-right-item">
+                    <a href="{{ post.url | relative_url }}">
+                        <img class="article-img travel-side-img" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                        <h3 class="article-headline travel-side-headline">{{ post.title }}</h3>
+                    </a>
+                    <div class="article-footer">
+                        <span class="article-meta">{{ post.author }}&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}</span>
+                        <a class="speaker-btn" href="{{ post.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- ROW 6 — PORTS -->
+    {% assign ports_posts = site.posts | where: "category", "Ports" %}
+    {% if ports_posts.size > 0 %}
+    <div class="homepage-cat-section">
+        <div class="homepage-cat-header">
+            <span class="articles-section-label">Ports of Call</span>
+            <hr class="articles-section-rule">
+            <a href="{{ '/categories/ports/' | relative_url }}" class="hp-see-all">All port guides &rarr;</a>
+        </div>
+        <div class="ports-grid">
+            {% for post in ports_posts limit:4 %}
+            <div class="port-card">
+                <a href="{{ post.url | relative_url }}">
+                    <img class="article-img port-card-img" src="{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                </a>
+                {% if post.tags.size > 0 %}<span class="port-location">{{ post.tags | first }}</span>{% endif %}
+                <a href="{{ post.url | relative_url }}">
+                    <h3 class="article-headline port-headline">{{ post.title }}</h3>
+                </a>
+                <div class="article-footer">
+                    <span class="article-meta">{{ post.author }}&nbsp;·&nbsp;{{ post.date | date: "%B %Y" }}</span>
+                    <a class="speaker-btn" href="{{ post.url | relative_url }}" aria-label="Listen"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
 
 </div><!-- /desktop content -->
 

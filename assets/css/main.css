@@ -828,3 +828,144 @@ footer {
     gap: 36px; padding: 28px 0 32px; border-bottom: 1px solid var(--rule);
 }
 .row-3simple .article-headline { font-size: 22px; }
+
+/* ─── HOMEPAGE SEE-ALL LINK ───────────────────────────────────── */
+.hp-see-all {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--mid); transition: color 0.15s;
+    white-space: nowrap; flex-shrink: 0;
+}
+.hp-see-all:hover { color: var(--accent); }
+
+/* ─── ROW 2 — CASINOS (dense 3-col grid) ─────────────────────── */
+.casinos-grid {
+    display: grid;
+    grid-template-columns: 5fr 1px 3fr 1px 2fr;
+    gap: 0 2rem;
+    padding-bottom: 2.5rem;
+    align-items: start;
+}
+.casinos-grid .v-rule { background: var(--rule); align-self: stretch; }
+
+.casino-lead-img { aspect-ratio: 4 / 3 !important; }
+.casino-lead-headline { font-size: 1.7rem !important; line-height: 1.2 !important; }
+.casino-lead-dek { font-size: 15px !important; }
+
+.casino-mid { display: flex; flex-direction: column; gap: 0; }
+.casino-mid-item { padding: 0.9rem 0; border-bottom: 1px solid var(--rule); }
+.casino-mid-item:first-child { padding-top: 0; }
+.casino-mid-item:last-child { border-bottom: none; }
+.casino-mid-img { aspect-ratio: 16 / 9 !important; }
+.casino-mid-headline { font-size: 1.05rem !important; }
+
+.casino-text { display: flex; flex-direction: column; }
+.casino-text-item { padding: 0.75rem 0; border-bottom: 1px solid var(--rule); }
+.casino-text-item:first-child { padding-top: 0; }
+.casino-text-item:last-child { border-bottom: none; }
+.casino-text-headline { font-size: 0.95rem !important; }
+
+/* ─── ROW 3 — CRUISE LINES (light band) ──────────────────────── */
+.cruise-band-wrap {
+    margin-top: 32px;
+    background: #f0ece6;
+    margin-left: -40px;
+    margin-right: -40px;
+    padding: 28px 40px 2.5rem;
+}
+.cruise-band-wrap .homepage-cat-header { margin-bottom: 16px; }
+.cruise-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+.cruise-card-img { aspect-ratio: 3 / 2 !important; }
+.cruise-card-headline { font-size: 1.05rem !important; margin-top: 10px !important; }
+.cruise-card-dek { font-size: 14px !important; }
+
+/* ─── ROW 4 — CAREER (2-col with italic sub-titles) ──────────── */
+.careers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 2.5rem;
+    margin-top: 8px;
+}
+.careers-sub-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.55rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ink);
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.career-item {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 0.85rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+}
+.career-item:last-child { border-bottom: none; }
+.career-item-img-link { display: block; flex-shrink: 0; }
+.career-item-img-link img {
+    display: block; width: 72px; height: 54px;
+    object-fit: cover; background: #e8e8e8;
+}
+.career-item-text { min-width: 0; }
+.career-headline { font-size: 0.95rem !important; margin-bottom: 4px !important; }
+
+/* ─── ROW 5 — TRAVEL (3fr + 1fr) ─────────────────────────────── */
+.travel-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+    padding-bottom: 2.5rem;
+    align-items: start;
+    margin-top: 8px;
+}
+.travel-lead-img { aspect-ratio: 16 / 8 !important; }
+.travel-lead-headline { font-size: 2rem !important; }
+.travel-right {
+    border-left: 1px solid var(--rule);
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.travel-right-item { padding: 0.85rem 0; border-bottom: 1px solid var(--rule); }
+.travel-right-item:first-child { padding-top: 0; }
+.travel-right-item:last-child { border-bottom: none; }
+.travel-side-img { aspect-ratio: 3 / 2 !important; }
+.travel-side-headline { font-size: 0.95rem !important; margin-top: 8px !important; }
+
+/* ─── ROW 6 — PORTS (4-col) ──────────────────────────────────── */
+.ports-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    padding-bottom: 2.5rem;
+    margin-top: 8px;
+}
+.port-card { padding: 0 1.5rem 0 0; border-right: 1px solid var(--rule); }
+.port-card:first-child { padding-left: 0; }
+.port-card:last-child { border-right: none; padding-right: 0; }
+.port-card + .port-card { padding-left: 1.5rem; }
+.port-card-img { aspect-ratio: 3 / 2 !important; }
+.port-location {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin: 0.55rem 0 0.25rem;
+}
+.port-headline { font-size: 1.05rem !important; }
